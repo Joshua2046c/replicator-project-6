@@ -1,0 +1,17 @@
+{
+  "schema_version":1,
+  "status":"ready",
+  "bom_ready":true,
+  "requirements_digest":"c39093ad1feae38052d4266ad1f476c08ce895dc909a9af1bdca9eadb00ef05a",
+  "items":[
+    {"id":"handle","role":"printed_part","name":"拱形提手，PETG，粉色","quantity":1,"source":"default"},
+    {"id":"base","role":"printed_part","name":"带双方孔底座，PETG，青色","quantity":1,"source":"default"},
+    {"id":"liner","role":"printed_part","name":"圆饼灯内胆及上圈，PETG，米黄色","quantity":1,"source":"default"},
+    {"id":"shade","role":"printed_part","name":"1.8 mm 名义径向薄壁竖纹灯罩，半透明 PETG，绿色","quantity":1,"source":"default"},
+    {"id":"magnet_7x2","role":"magnetic_fastener","name":"轴向充磁圆片磁铁 Ø7×2 mm","quantity":12,"source":"user_dimensions","procurement_status":"external_procurement_required","required_user_evidence":[]},
+    {"id":"light_60x8","role":"light_module","name":"用户图示成品圆饼灯组 Ø60×8 mm，含原装线及匹配电源","quantity":1,"source":"user","procurement_status":"external_procurement_required","required_user_evidence":[]},
+    {"id":"adhesive","role":"assembly_consumable","name":"适用于 PETG 与镀镍磁铁的双组分环氧胶（方桩及磁铁固定用）","quantity":1,"source":"default","procurement_status":"external_procurement_required","required_user_evidence":[]}
+  ],
+  "unresolved_items":[],
+  "advisories":["磁铁及灯组的尺寸由用户给定，无确切品牌或供应商料号；采购时保持这些尺寸。","灯组电源电压、功率、接头和磁铁吸力尚无供应商数据；模型不改变原装电路。","胶按其厂家对 PETG 和镀层的兼容说明选购并完全固化。"]
+}

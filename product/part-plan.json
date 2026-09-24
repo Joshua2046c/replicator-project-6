@@ -1,0 +1,13 @@
+{
+  "scope":"mechanical interfaces only; four custom printed objects",
+  "items":[
+    {"id":"magnet_7x2","requested":{"diameter_mm":7,"thickness_mm":2,"quantity":12},"catalog_search":"disc magnet 7x2","rejected_candidates":["PlainWasher: washer, not magnet","LappedFlange: pipe flange, not magnet","AluminumSpacer: aluminum spacer, not magnet"],"step_parts_matches":0,"status":"user_dimensions_sufficient_for_pockets","geometry":"not imported or approximated"},
+    {"id":"light_60x8","status":"user_supplied_envelope","geometry":"pocket only; no guessed purchased solid","evidence":"uploaded light dimension image"}
+  ],
+  "connections":[
+    {"id":"handle_base","implementation":"free","method":"adhesive retained square tenons"},
+    {"id":"base_liner","implementation":"free","method":"three paired magnet pockets"},
+    {"id":"liner_shade","implementation":"free","method":"three paired magnet pockets"}
+  ],
+  "unhandled_connections":[]
+}

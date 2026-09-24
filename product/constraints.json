@@ -1,0 +1,14 @@
+{
+  "units":"mm",
+  "external_parts":{"light":{"diameter":60,"thickness":8,"evidence":"user image and explicit dimensions"},"magnets":{"diameter":7,"thickness":2,"quantity":12,"evidence":"user dimensions"}},
+  "interfaces":{
+    "base_liner":{"z":12,"magnet_radius":41,"angles_deg":[0,120,240]},
+    "liner_shade":{"z":30,"magnet_radius":42,"angles_deg":[0,120,240]},
+    "magnet_pockets":{"diameter":7.2,"depth":2.15},
+    "handle":{"socket_centers_x":[-65,65],"socket_center_y":0,"socket_top_z":12,"square_socket":8.1,"socket_depth":8.2,"square_tenon":7.8,"engagement":8},
+    "light":{"pocket_diameter":60.6,"seat_z":18,"light_top_z":26,"cup_rim_z":30},
+    "wire":{"direction":"negative Y","width":8,"liner_open_top_z":30,"liner_floor_z":18,"shade_bottom_z":30,"shade_notch_height":6}
+  },
+  "defaults":{"manufacturing":"FDM PETG","shade_nominal_radial_wall":1.8,"adhesive_retained_magnets":true,"adhesive_retained_tenons":true},
+  "advisories":["原装灯电压、功率及接头规格未提供，保留原配电源与线束。","磁铁孔和方桩配合需打印试装；灯罩透光和上肩支撑需切片检查。"]
+}

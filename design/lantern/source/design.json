@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "targets": [
+    {
+      "id": "base",
+      "label": "base",
+      "cells": [
+        {
+          "id": "base",
+          "target": "base",
+          "order": 0,
+          "path": "design/lantern/source/parts/base/000-base.py",
+          "sha256": "5508a67e3ff67c7d0ad19f8fd8fc42e8752b4f929279b32e14ac67b76ae4dbfe"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "handle",
+      "label": "handle",
+      "cells": [
+        {
+          "id": "handle",
+          "target": "handle",
+          "order": 0,
+          "path": "design/lantern/source/parts/handle/000-handle.py",
+          "sha256": "9176dec97d7eea5c3ad6b290075f022c1ba853a8814550b8f12c2e9e6a5d9e4b"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "liner",
+      "label": "liner",
+      "cells": [
+        {
+          "id": "liner",
+          "target": "liner",
+          "order": 0,
+          "path": "design/lantern/source/parts/liner/000-liner.py",
+          "sha256": "94f968f138fe345e02339f8a8dc3ced55aef2d9ba42203db64dccd0e81f5586a"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "shade",
+      "label": "shade",
+      "cells": [
+        {
+          "id": "shade",
+          "target": "shade",
+          "order": 0,
+          "path": "design/lantern/source/parts/shade/000-shade.py",
+          "sha256": "7165e651cb9c1e3fe7874263960f9390fb0df64865fb38c149254102ad60635c"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "base",
+      "target": "base",
+      "label": "底座",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "e3ab85902f4bcae1131b5b79b3dd377d176c895f7cd017f92a700dfed2f131b1",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "handle",
+      "target": "handle",
+      "label": "拱形提手",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "b43bf807a26c05b8669b73bc81a8bf8636f44189067f314459d2e410587570fa",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "liner",
+      "target": "liner",
+      "label": "灯托内胆",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "46127ddf60dba7db6c7513b02c768c1b4f6cf7a030a0c2233b68da7d511721bb",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "shade",
+      "target": "shade",
+      "label": "薄壁竖纹灯罩",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "66e3b2a78fb94a4cd7b8f1191412227698ed535c746451a59054be72791e8a23",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          30
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    }
+  ],
+  "assets": [],
+  "fits": [],
+  "updatedAt": "2026-09-24T23:12:17.962Z",
+  "parameters": {
+    "base": {
+      "base_diameter": 114,
+      "base_thickness": 12,
+      "base_ear_length": 30,
+      "base_ear_width": 22,
+      "base_ear_center": 60,
+      "base_socket_center": 65,
+      "base_socket_size": 8.1,
+      "base_socket_depth": 8.2,
+      "base_magnet_pocket_diameter": 7.2,
+      "base_magnet_pocket_depth": 2.15,
+      "base_magnet_radius": 41,
+      "base_rim_outer_diameter": 104,
+      "base_rim_inner_diameter": 94.6,
+      "base_rim_height": 2,
+      "base_edge_radius": 1
+    },
+    "handle": {
+      "handle_center_spacing": 130,
+      "handle_band_width": 10,
+      "handle_thickness": 10,
+      "handle_height": 198,
+      "handle_tenon_size": 7.8,
+      "handle_tenon_length": 8,
+      "handle_edge_radius": 0.7
+    },
+    "liner": {
+      "liner_flange_diameter": 94,
+      "liner_floor_thickness": 6,
+      "liner_cup_outer_diameter": 76,
+      "liner_light_pocket_diameter": 60.6,
+      "liner_cup_height": 18,
+      "liner_shelf_thickness": 4,
+      "liner_magnet_pocket_diameter": 7.2,
+      "liner_magnet_pocket_depth": 2.15,
+      "liner_lower_magnet_radius": 41,
+      "liner_upper_magnet_radius": 42,
+      "liner_wire_width": 8,
+      "liner_wire_angle": -90,
+      "liner_height": 96,
+      "liner_top_outer_diameter": 73.4,
+      "liner_top_inner_diameter": 63,
+      "liner_top_thickness": 5,
+      "liner_post_diameter": 4,
+      "liner_post_radius": 33.8,
+      "liner_post_angle": 60
+    },
+    "shade": {
+      "shade_height": 76,
+      "shade_belly_diameter": 106,
+      "shade_waist_diameter": 99,
+      "shade_neck_diameter": 79.2,
+      "shade_wall_thickness": 1.8,
+      "shade_ring_outer_diameter": 94,
+      "shade_ring_inner_diameter": 74,
+      "shade_ring_height": 4,
+      "shade_rib_count": 40,
+      "shade_rib_radius": 1.8,
+      "shade_magnet_pocket_diameter": 7.2,
+      "shade_magnet_pocket_depth": 2.15,
+      "shade_magnet_radius": 42,
+      "shade_wire_width": 8,
+      "shade_wire_height": 6,
+      "shade_wire_angle": -90
+    }
+  }
+}

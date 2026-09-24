@@ -1,0 +1,22 @@
+{
+  "cad_revision":"5c7833eb0052ae3e6668bd4bf004ccfc7d7ea06a9b5e38416585b01a4b7bd142",
+  "method":"cad.inspect measurements and collision analysis; cad.look visual review",
+  "results":{
+    "valid_solids":4,
+    "assembly_envelope_mm":[150,114,210],
+    "interfering_pairs":0,
+    "undetermined_pairs":0,
+    "handle_shade_min_gap_mm":4.6759,
+    "light_pocket_diameter_mm":60.6,
+    "light_cup_available_height_mm":12,
+    "specified_light_thickness_mm":8,
+    "magnet_pocket_diameter_mm":7.2,
+    "sampled_shade_and_liner_lower_pocket_depth_mm":2.15,
+    "upper_interface_matching_hole_edges_gap_mm":[0,0,0],
+    "lower_interface_sample_matching_hole_edges_gap_mm":0,
+    "liner_wire_notch_width_mm":8,
+    "handle_base_shoulder_gap_mm":0
+  },
+  "visual_review":{"views":["assembled isometric","assembled front","shade underside","liner assembly before shade"],"finding":"Four distinct parts; arched handle, double-belly fluted shade, exposed upper liner ring, rear lower wire openings and three shade magnet pockets are visible."},
+  "limits":["No physical printing or fit trial performed.","Shade nominal wall is radial 1.8 mm, locally thickened by flutes; no claim of uniform normal wall thickness.","Magnet holding force, adhesive durability, light temperature and translucency require a physical prototype.","Original lamp electrical ratings and connector identity are not provided; retain original wiring and matched supply."]
+}
