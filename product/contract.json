@@ -10,6 +10,7 @@
     {"id":"wire_exit","kind":"clearance","description":"内胆和灯罩底部开放走线缺口对齐","source":"user_requested","required":true}
   ],
   "external_references": [
+    {"id":"lantern_reference_side","source":"user_requested","description":"用户补充角度，要求简化结构","path":"product/references/uploads/20260924T231819919Z-1-image.png"},
     {"id":"lantern_reference","source":"user_requested","description":"中式提灯外观参考","path":"product/references/uploads/20260924T224920191Z-1-ishot-2026-09-25-6-22-22.png"},
     {"id":"light_reference","source":"user_requested","description":"圆饼灯尺寸 Ø60 mm、厚 8 mm","path":"product/references/uploads/20260924T224920191Z-2-image.png"}
   ],
@@ -18,6 +19,6 @@
     "maintenance":"上提灯罩即可检查灯和线，再提内胆使底座分离。",
     "user_access":["顶部灯组取放孔","后下部开放走线槽","两层可分离磁吸接口"]
   },
-  "cad": {"requirement":"required","designs":[{"role":"lantern","design_id":"lantern","description":"Four-part Chinese lantern","delivery_target":"printable_part","required_formats":["step"],"interface_ids":["light_fit","magnet_joints","square_tenons","wire_exit"],"reference_ids":["lantern_reference","light_reference"]}]},
+  "cad": {"requirement":"required","designs":[{"role":"lantern","design_id":"lantern","description":"Four-part Chinese lantern","delivery_target":"printable_part","required_formats":["step"],"interface_ids":["light_fit","magnet_joints","square_tenons","wire_exit"],"reference_ids":["lantern_reference","light_reference","lantern_reference_side"]}]},
   "open_questions": []
 }

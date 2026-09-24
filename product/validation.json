@@ -1,22 +1,61 @@
 {
-  "cad_revision":"5c7833eb0052ae3e6668bd4bf004ccfc7d7ea06a9b5e38416585b01a4b7bd142",
-  "method":"cad.inspect measurements and collision analysis; cad.look visual review",
-  "results":{
-    "valid_solids":4,
-    "assembly_envelope_mm":[150,114,210],
-    "interfering_pairs":0,
-    "undetermined_pairs":0,
-    "handle_shade_min_gap_mm":4.6759,
-    "light_pocket_diameter_mm":60.6,
-    "light_cup_available_height_mm":12,
-    "specified_light_thickness_mm":8,
-    "magnet_pocket_diameter_mm":7.2,
-    "sampled_shade_and_liner_lower_pocket_depth_mm":2.15,
-    "upper_interface_matching_hole_edges_gap_mm":[0,0,0],
-    "lower_interface_sample_matching_hole_edges_gap_mm":0,
-    "liner_wire_notch_width_mm":8,
-    "handle_base_shoulder_gap_mm":0
+  "cad_revision": "bb988a989c828dfce81747b29e75fabd0438ee6286cd6d80702b793fd2ee7769",
+  "export_id": "export-b5e4081f1c5277658ca20789511a6e53",
+  "method": "cad.inspect exact measurements, collision and bounding boxes; cad.look visual review; source parameter and placement consistency checks",
+  "measured_results": {
+    "valid_solids": 4,
+    "assembly_envelope_mm": [
+      140,
+      114,
+      210
+    ],
+    "interfering_pairs": 0,
+    "undetermined_pairs": 0,
+    "light_pocket_diameter_mm": 60.6,
+    "light_cup_available_height_mm": 22,
+    "specified_light_thickness_mm": 8,
+    "liner_wire_notch_width_mm": 8,
+    "handle_base_gap_mm": 0
   },
-  "visual_review":{"views":["assembled isometric","assembled front","shade underside","liner assembly before shade"],"finding":"Four distinct parts; arched handle, double-belly fluted shade, exposed upper liner ring, rear lower wire openings and three shade magnet pockets are visible."},
-  "limits":["No physical printing or fit trial performed.","Shade nominal wall is radial 1.8 mm, locally thickened by flutes; no claim of uniform normal wall thickness.","Magnet holding force, adhesive durability, light temperature and translucency require a physical prototype.","Original lamp electrical ratings and connector identity are not provided; retain original wiring and matched supply."]
+  "source_parameter_checks": {
+    "magnet_pocket_diameter_mm": 7.2,
+    "magnet_pocket_depth_mm": 2.15,
+    "paired_magnet_pattern_radius_mm": 39.2,
+    "paired_magnet_angles_deg": [
+      0,
+      120,
+      240
+    ],
+    "magnetic_interface_heights_mm": [
+      4,
+      32
+    ],
+    "square_tenon_centres_x_mm": [
+      -51,
+      51
+    ],
+    "square_tenon_size_mm": 7.8,
+    "square_socket_size_mm": 8.1,
+    "tenon_engagement_mm": 8,
+    "shade_lower_opening_mm": 69.2,
+    "liner_top_outer_diameter_mm": 68.4,
+    "sleeve_radial_clearance_mm": 0.4,
+    "wire_notch_direction_deg": -90,
+    "requirements_digest_matches_bom": true
+  },
+  "visual_review": {
+    "views": [
+      "assembled isometric",
+      "front during simplification",
+      "liner and tray with shade hidden",
+      "shade underside"
+    ],
+    "finding": "Four separate parts. Circular tray has no projecting ears; handle feet jog inward to tray sockets. Straight lamp cup and integral slotted tube replace the conical pedestal, stacked flanges and three-post frame. Shade underside shows three magnet pockets and an open wire recess. One necessary shade magnet ring remains. Hidden construction is a design default, not a photographed fact."
+  },
+  "limits": [
+    "No physical printing or fit trial performed.",
+    "Shade wall is nominally radial 1.8 mm, with fluted inner and outer profiles; normal wall thickness is not certified uniform.",
+    "Magnet holding force, adhesive durability, light temperature and translucency require a physical prototype.",
+    "Original lamp electrical ratings and connector identity are not provided; retain original wiring and matched supply."
+  ]
 }

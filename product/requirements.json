@@ -2,6 +2,7 @@
   "requirements": {
     "product_class": {"value":"mechanical", "source":"default"},
     "form_factor": {"value":"Chinese lantern matching uploaded reference", "source":"user"},
+    "structure_simplicity": {"value":"simplify the structure according to the additional reference angle", "source":"user"},
     "parts": {"value":["handle","base","liner","shade"], "source":"user"},
     "light_module_mm": {"value":{"diameter":60,"thickness":8}, "source":"user"},
     "magnet_mm": {"value":{"diameter":7,"thickness":2}, "source":"user"},
@@ -10,7 +11,7 @@
     "wire_clearance": {"value":"aligned bottom recesses in liner and shade", "source":"user"},
     "thin_shade": {"value":true, "source":"user"},
     "base_board": {"value":"none; existing finished wired light module", "source":"default"},
-    "envelope_target_mm": {"value":[150,114,210], "source":"default"},
+    "envelope_target_mm": {"value":[140,114,210], "source":"default"},
     "shade_wall_mm": {"value":1.8, "source":"default"},
     "magnet_pocket_mm": {"value":{"diameter":7.2,"depth":2.15}, "source":"default"},
     "magnet_quantity": {"value":12, "source":"default"},

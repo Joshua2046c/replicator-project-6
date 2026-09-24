@@ -33,18 +33,21 @@ for fraction,radius in stations:
     height=shade_ring_height+fraction*(shade_height-shade_ring_height)
     amplitude=shade_rib_radius*sin(pi*fraction)**0.5
     points=[]
+    inner_points=[]
     for index in range(sample_count):
         angle=index*2*pi/sample_count
         fluted_radius=radius+amplitude*(1+cos(int(shade_rib_count)*angle))/2
         points.append((fluted_radius*cos(angle),fluted_radius*sin(angle),height))
+        inner_radius=fluted_radius-shade_wall_thickness
+        inner_points.append((inner_radius*cos(angle),inner_radius*sin(angle),height))
     outline=Wire([Edge.make_spline(points,periodic=True)])
     outside_sections.append(Face(outline))
-    inside_sections.append(Plane.XY.offset(height)*Circle(radius-shade_wall_thickness))
+    inside_sections.append(Face(Wire([Edge.make_spline(inner_points,periodic=True)])))
 outside=loft(outside_sections)
 inside=loft(inside_sections)
-shade=outside-inside
-ring=extrude(Circle(shade_ring_outer_diameter/2)-Circle(shade_ring_inner_diameter/2),amount=shade_ring_height+0.6)
-shade=shade+ring
+lower_outer=Cylinder(shade_ring_outer_diameter/2,shade_ring_height+shade_wall_thickness,align=(Align.CENTER,Align.CENTER,Align.MIN))
+lower_inner=Cylinder(shade_ring_inner_diameter/2,shade_ring_height+shade_wall_thickness,align=(Align.CENTER,Align.CENTER,Align.MIN))
+shade=(outside+lower_outer)-(inside+lower_inner)
 for angle in (0,120,240):
     pocket=Pos(shade_magnet_radius*cos(radians(angle)),shade_magnet_radius*sin(radians(angle)),0)*Cylinder(shade_magnet_pocket_diameter/2,shade_magnet_pocket_depth,align=(Align.CENTER,Align.CENTER,Align.MIN))
     shade=shade-pocket
