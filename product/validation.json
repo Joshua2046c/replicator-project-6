@@ -1,6 +1,6 @@
 {
-  "cad_revision": "0913922a98dd79d70b564412bcb3e241b1ea6d31906b8734eacd3fdfbef62771",
-  "export_id": "export-49dd7c25e3c00f658c69650ed1e91f92",
+  "cad_revision": "d2bfb90e5b28c8481add3ba5f8b8229d4fcc4be1bdb3adea49ed7d9a2c1ab808",
+  "export_id": "export-d25538682db288e6fadbf6e2b36a3668",
   "export_status": "handoff",
   "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt.",
   "measured_results": {
@@ -17,10 +17,11 @@
     ],
     "interfering_pairs": 0,
     "undetermined_pairs": 0,
-    "handle_shade_minimum_gap_mm": 5.0292,
+    "handle_shade_minimum_gap_mm": 4.9405,
     "liner_top_z_mm": 106,
     "shade_top_z_mm": 108,
-    "liner_recess_below_rim_mm": 2
+    "liner_recess_below_rim_mm": 2,
+    "handle_liner_minimum_gap_mm": 1.4
   },
   "source_parameter_checks": {
     "shade_magnet_positions_mm": [
@@ -103,34 +104,44 @@
         4
       ]
     ],
-    "base_pocket_remaining_floor_mm": 1.85
+    "base_pocket_remaining_floor_mm": 1.85,
+    "square_socket_mm": 7.8,
+    "square_tenon_mm": 7.4,
+    "square_joint_center_spacing_mm": 100.8,
+    "square_joint_engagement_mm": 8,
+    "square_socket_depth_mm": 8.2,
+    "square_joint_side_gap_mm": 0.2,
+    "square_socket_inner_wall_mm": 1.5,
+    "square_socket_outer_corner_wall_mm": 2.5601249082990662,
+    "square_socket_outer_top_land_mm": 1.5601249082990662
   },
   "unchanged_object_evidence": {
-    "previous_revision": "6715f3a56223b198cf8c5b424b7b2ade2dacd39cd2e2498f77b976e89660515a",
+    "previous_revision": "0913922a98dd79d70b564412bcb3e241b1ea6d31906b8734eacd3fdfbef62771",
     "objects": [
-      "handle",
+      "liner",
       "shade"
     ],
     "shape_hashes": {
-      "handle": "3f2863bd1548407dae3b1f3a376ca15f5b3c311cc683ff3fd3be16a82309dcc3",
+      "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
       "shade": "eb0746f892971986fa139ebc7c7ea9e9c57b585bb0038afcd75352860a5934ed"
     },
-    "note": "Handle and shade shape hashes and placements match the previous handoff. Base and liner change only their lower-interface magnet pocket pattern."
+    "note": "Liner and shade shape hashes and placements are unchanged. Base sockets and handle foot spacing/tenon size changed through four scalar parameters."
   },
   "visual_review": {
     "views": [
+      "assembled iso",
       "base isolated top",
-      "liner isolated bottom"
+      "base handle liner isolated iso"
     ],
-    "finding": "Exactly two opposed pockets on base top and liner bottom, with matching 0/180-degree layout. No third pocket remains. Previous shade/handle appearance retained by unchanged source and shape hashes."
+    "finding": "Both square sockets remain enclosed within the rim with more material at the outside edge; handle feet stay aligned and seated. Lantern outline and the two-pair magnetic interfaces are retained."
   },
   "wire_route": {
     "description": "Original liner recess retained. Cable exits exposed lamp cup above base rim Z12 and below shade bottom Z32; keep wire out of magnetic mating plane.",
     "actual_cable_trial": false
   },
   "export_checks": {
-    "step_sha256": "a3303b8c8592de3f9eeeb035074cd040d2d9a6f2d350b2f36f952d94335a24e1",
-    "bytes": 5820377,
+    "step_sha256": "aacce23fe8584940deabc00d1a500ae53bc7a3627244078b413123a27ed2c457",
+    "bytes": 5809679,
     "preview_refreshed": true,
     "interference": {
       "summary": "No interference across 6 object pairs.",
@@ -166,7 +177,7 @@
       "radial_contraction_from_previous_mm": 4,
       "previous_opening_diameter_mm": 90.4,
       "current_opening_diameter_mm": 82.4,
-      "evidence": "Circular 82.4 mm opening retained; 86–87.2 mm wave outer diameter at rim; final isolated isometric view."
+      "evidence": "Shade source and shape unchanged from the previous handoff; circular 82.4 mm opening retained."
     },
     "grooves_continue_over_inward_rim": {
       "status": "passed",
@@ -184,6 +195,15 @@
       "radius_mm": 39.2,
       "interface_z_mm": 4,
       "evidence": "Exact-build base top and liner bottom views; source parameters and unchanged placements match paired hole positions."
+    },
+    "square_joint_edge_adjustment": {
+      "status": "passed",
+      "each_socket_inward_shift_mm": 0.6,
+      "previous_tenon_mm": 7.8,
+      "current_tenon_mm": 7.4,
+      "previous_outer_top_land_mm": 0.8012228396316772,
+      "current_outer_top_land_mm": 1.5601249082990662,
+      "evidence": "Current-build parameter inspection, circular-rim/square-corner calculation, isolated base top view and assembly collision/clearance check. Remaining inner wall 1.5 mm; outer top land 1.5601 mm; paired centers X±50.4 mm."
     }
   }
 }

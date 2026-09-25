@@ -95,8 +95,8 @@
     },
     "square_joint_mm": {
       "value": {
-        "tenon": 7.8,
-        "socket": 8.1,
+        "tenon": 7.4,
+        "socket": 7.8,
         "engagement": 8,
         "socket_depth": 8.2
       },
@@ -152,6 +152,14 @@
     "base_liner_magnet_locations": {
       "value": 2,
       "source": "user"
+    },
+    "square_joint_edge_adjustment": {
+      "value": "move the two square sockets away from the outer edge and slightly reduce the mating handle tenons",
+      "source": "user"
+    },
+    "square_joint_center_spacing_mm": {
+      "value": 100.8,
+      "source": "default"
     }
   },
   "open_questions": []

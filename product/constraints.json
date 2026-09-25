@@ -44,15 +44,18 @@
     },
     "handle": {
       "socket_centers_x": [
-        -51,
-        51
+        -50.4,
+        50.4
       ],
       "socket_center_y": 0,
       "socket_top_z": 12,
-      "square_socket": 8.1,
+      "square_socket": 7.8,
       "socket_depth": 8.2,
-      "square_tenon": 7.8,
-      "engagement": 8
+      "square_tenon": 7.4,
+      "engagement": 8,
+      "lateral_gap_per_side": 0.2,
+      "socket_inner_rim_minimum_wall": 1.5,
+      "socket_outer_top_land_minimum": 1.56
     },
     "light": {
       "pocket_diameter": 60.6,

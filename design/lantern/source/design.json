@@ -67,7 +67,7 @@
       "label": "浅托盘底座",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "addf040bf96e650fe59fa684034744f745a9a28a529ce3d1d3664afbd72f2858",
+      "shapeHash": "5269990fb65970016940ec8b0116d2fbc9a50372d8923da9baf443d3e33cc7d5",
       "transform": {
         "positionMm": [
           0,
@@ -94,7 +94,7 @@
       "label": "翘头横梁提手",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "3f2863bd1548407dae3b1f3a376ca15f5b3c311cc683ff3fd3be16a82309dcc3",
+      "shapeHash": "bbe95351bd50af5b9d5408ff4a48a4cb18a6ebfaa7843664d3f0ef8ba8ff2518",
       "transform": {
         "positionMm": [
           0,
@@ -172,13 +172,13 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-25T14:49:38.386Z",
+  "updatedAt": "2026-09-25T14:54:24.636Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
       "base_thickness": 12,
-      "base_socket_center": 51,
-      "base_socket_size": 8.1,
+      "base_socket_center": 50.4,
+      "base_socket_size": 7.8,
       "base_socket_depth": 8.2,
       "base_magnet_pocket_diameter": 7.2,
       "base_magnet_pocket_depth": 2.15,
@@ -194,10 +194,10 @@
       "handle_band_width": 10,
       "handle_thickness": 10,
       "handle_height": 206,
-      "handle_tenon_size": 7.8,
+      "handle_tenon_size": 7.4,
       "handle_tenon_length": 8,
       "handle_edge_radius": 0.7,
-      "handle_foot_spacing": 102,
+      "handle_foot_spacing": 100.8,
       "handle_jog_start": 4,
       "handle_jog_height": 20,
       "handle_beam_width": 180,

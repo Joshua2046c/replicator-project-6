@@ -21,7 +21,7 @@
     {
       "id": "square_tenons",
       "kind": "mechanical_mating",
-      "description": "提手方桩与底座配对方孔",
+      "description": "提手方桩与底座配对方孔；方孔远离外边缘，插桩截面略缩小",
       "source": "user_requested",
       "required": true
     },
@@ -88,6 +88,12 @@
       "source": "user_requested",
       "description": "底座与内胆的磁吸固定位置也改为两个，两侧孔位配对",
       "path": "product/references/uploads/20260925T144813352Z-1-mark.png"
+    },
+    {
+      "id": "square_joint_reference",
+      "source": "user_requested",
+      "description": "两侧方孔太贴近底座外边缘，调整位置并略微缩小插桩",
+      "path": "product/references/uploads/20260925T145245411Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -125,7 +131,8 @@
           "shade_revision_reference",
           "rim_revision_reference",
           "rim_fluting_reference",
-          "base_magnets_reference"
+          "base_magnets_reference",
+          "square_joint_reference"
         ]
       }
     ]

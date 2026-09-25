@@ -2,21 +2,31 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "67d2e7e97a8f2c4d964eeac263d6bc899622df146eccf5aecca74a4545bac0f0",
+  "requirements_digest": "587ab18d3313ff3a1c5062d28471644c349ed8f4984a3ee40477431e57173dc5",
   "items": [
     {
       "id": "handle",
       "role": "printed_part",
       "name": "双立杆翘头横梁提手，PETG，暖木色",
       "quantity": 1,
-      "source": "default"
+      "source": "default",
+      "assembly_interface": {
+        "tenon_mm": 7.4,
+        "center_spacing_mm": 100.8,
+        "engagement_mm": 8
+      }
     },
     {
       "id": "base",
       "role": "printed_part",
       "name": "带双方孔浅圆托盘，PETG，青色",
       "quantity": 1,
-      "source": "default"
+      "source": "default",
+      "assembly_interface": {
+        "socket_mm": 7.8,
+        "center_spacing_mm": 100.8,
+        "depth_mm": 8.2
+      }
     },
     {
       "id": "liner",
