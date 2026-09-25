@@ -12,7 +12,7 @@
           "target": "base",
           "order": 0,
           "path": "design/lantern/source/parts/base/000-base.py",
-          "sha256": "47f3e6eaf8af7733b396c1dc5f470676e6d02db4a82902c19f49c267e101486d"
+          "sha256": "8a3776dcb58806822d8b6a2b62065ba7d017eb525d3ec4072b4c9ee5ad5d1d67"
         }
       ],
       "dependencies": []
@@ -40,7 +40,7 @@
           "target": "liner",
           "order": 0,
           "path": "design/lantern/source/parts/liner/000-liner.py",
-          "sha256": "320948d207229c83d023efaabf4d895f02bfe45fc713beb38c0d7526f03ece68"
+          "sha256": "f8bbc6c1cfe26dacc17672d5a160e5f739a185ad3e7c978752b057f486cced27"
         }
       ],
       "dependencies": []
@@ -67,7 +67,7 @@
       "label": "浅托盘底座",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "ad6e533fb744ace47ad1b0d20d31817711a7428f41d30b091a7c6cf12391f479",
+      "shapeHash": "addf040bf96e650fe59fa684034744f745a9a28a529ce3d1d3664afbd72f2858",
       "transform": {
         "positionMm": [
           0,
@@ -121,7 +121,7 @@
       "label": "直筒镂空内胆",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "49679052ff0198a1c71e4fddbf055dceddfc9dda2cfcabb88d799c8b6b91c7eb",
+      "shapeHash": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
       "transform": {
         "positionMm": [
           0,
@@ -172,7 +172,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-25T14:40:47.554Z",
+  "updatedAt": "2026-09-25T14:49:38.386Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -185,7 +185,9 @@
       "base_magnet_radius": 39.2,
       "base_rim_inner_diameter": 90,
       "base_edge_radius": 1,
-      "base_floor_thickness": 4
+      "base_floor_thickness": 4,
+      "base_magnet_count": 2,
+      "base_magnet_angle": 0
     },
     "handle": {
       "handle_center_spacing": 130,
@@ -225,7 +227,9 @@
       "liner_slot_width": 9,
       "liner_slot_angle": -90,
       "liner_upper_magnet_count": 2,
-      "liner_upper_magnet_angle": 0
+      "liner_upper_magnet_angle": 0,
+      "liner_lower_magnet_count": 2,
+      "liner_lower_magnet_angle": 0
     },
     "shade": {
       "shade_height": 76,

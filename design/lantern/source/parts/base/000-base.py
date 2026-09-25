@@ -9,13 +9,16 @@ base_socket_depth = param("base_socket_depth",8.2)
 base_magnet_pocket_diameter = param("base_magnet_pocket_diameter",7.2)
 base_magnet_pocket_depth = param("base_magnet_pocket_depth",2.15)
 base_magnet_radius = param("base_magnet_radius",39.2)
+base_magnet_count = param("base_magnet_count",2)
+base_magnet_angle = param("base_magnet_angle",0.0)
 base_edge_radius = param("base_edge_radius",0.7)
 base = Cylinder(base_diameter/2,base_thickness,align=(Align.CENTER,Align.CENTER,Align.MIN))
 base = fillet(base.edges().filter_by(GeomType.CIRCLE),base_edge_radius)
 base -= Pos(0,0,base_floor_thickness)*Cylinder(base_rim_inner_diameter/2,base_thickness,align=(Align.CENTER,Align.CENTER,Align.MIN))
 for side in (-1,1):
     base -= Pos(side*base_socket_center,0,base_thickness-base_socket_depth)*Box(base_socket_size,base_socket_size,base_socket_depth+1,align=(Align.CENTER,Align.CENTER,Align.MIN))
-for angle in (0,120,240):
+for index in range(int(base_magnet_count)):
+    angle=base_magnet_angle+index*360/int(base_magnet_count)
     base -= Pos(base_magnet_radius*cos(radians(angle)),base_magnet_radius*sin(radians(angle)),base_floor_thickness-base_magnet_pocket_depth)*Cylinder(base_magnet_pocket_diameter/2,base_magnet_pocket_depth+1,align=(Align.CENTER,Align.CENTER,Align.MIN))
 assert base_floor_thickness-base_magnet_pocket_depth >= 1.5
 assert len(base.solids()) == 1 and base.is_valid

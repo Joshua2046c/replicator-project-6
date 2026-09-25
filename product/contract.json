@@ -14,7 +14,7 @@
     {
       "id": "magnet_joints",
       "kind": "mechanical_mating",
-      "description": "Ø7×2 mm磁铁；灯罩与内胆两处配对，内胆与底座三处配对",
+      "description": "Ø7×2 mm磁铁；灯罩与内胆两处配对，内胆与底座两处配对，共8枚",
       "source": "user_requested",
       "required": true
     },
@@ -82,6 +82,12 @@
       "source": "user_requested",
       "description": "纵向凹槽必须延伸经过收口肩部至口沿",
       "path": "product/references/uploads/20260925T143602053Z-1-mark.png"
+    },
+    {
+      "id": "base_magnets_reference",
+      "source": "user_requested",
+      "description": "底座与内胆的磁吸固定位置也改为两个，两侧孔位配对",
+      "path": "product/references/uploads/20260925T144813352Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -118,7 +124,8 @@
           "handle_reference",
           "shade_revision_reference",
           "rim_revision_reference",
-          "rim_fluting_reference"
+          "rim_fluting_reference",
+          "base_magnets_reference"
         ]
       }
     ]

@@ -86,7 +86,7 @@
       "source": "default"
     },
     "magnet_quantity": {
-      "value": 10,
+      "value": 8,
       "source": "default"
     },
     "light_pocket_diameter_mm": {
@@ -148,6 +148,10 @@
     "shade_rim_wave_depth_mm": {
       "value": 0.6,
       "source": "default"
+    },
+    "base_liner_magnet_locations": {
+      "value": 2,
+      "source": "user"
     }
   },
   "open_questions": []

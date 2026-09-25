@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "9c2b6c2d3c2611257fee878ffb37f16147fdea0d5873b3a1a89d098cfaa87f4c",
+  "requirements_digest": "67d2e7e97a8f2c4d964eeac263d6bc899622df146eccf5aecca74a4545bac0f0",
   "items": [
     {
       "id": "handle",
@@ -36,7 +36,7 @@
       "id": "magnet_7x2",
       "role": "magnetic_fastener",
       "name": "轴向充磁圆片磁铁 Ø7×2 mm",
-      "quantity": 10,
+      "quantity": 8,
       "source": "user_dimensions",
       "procurement_status": "external_procurement_required",
       "required_user_evidence": []

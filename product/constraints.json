@@ -9,7 +9,7 @@
     "magnets": {
       "diameter": 7,
       "thickness": 2,
-      "quantity": 10,
+      "quantity": 8,
       "evidence": "user dimensions"
     }
   },
@@ -19,8 +19,7 @@
       "magnet_radius": 39.2,
       "angles_deg": [
         0,
-        120,
-        240
+        180
       ]
     },
     "liner_shade": {

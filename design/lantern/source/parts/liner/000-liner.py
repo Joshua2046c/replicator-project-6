@@ -13,6 +13,8 @@ liner_slot_angle = param("liner_slot_angle",-90.0)
 liner_magnet_pocket_diameter = param("liner_magnet_pocket_diameter",7.2)
 liner_magnet_pocket_depth = param("liner_magnet_pocket_depth",2.15)
 liner_lower_magnet_radius = param("liner_lower_magnet_radius",39.2)
+liner_lower_magnet_count = param("liner_lower_magnet_count",2)
+liner_lower_magnet_angle = param("liner_lower_magnet_angle",0.0)
 liner_upper_magnet_radius = param("liner_upper_magnet_radius",39.2)
 liner_upper_magnet_count = param("liner_upper_magnet_count",2)
 liner_upper_magnet_angle = param("liner_upper_magnet_angle",0.0)
@@ -28,7 +30,7 @@ for index in range(int(liner_slot_count)):
     tube -= window
 liner += tube
 for radius,start_z,angles in (
-    (liner_lower_magnet_radius,0,(0,120,240)),
+    (liner_lower_magnet_radius,0,tuple(liner_lower_magnet_angle+index*360/int(liner_lower_magnet_count) for index in range(int(liner_lower_magnet_count)))),
     (liner_upper_magnet_radius,liner_cup_height-liner_magnet_pocket_depth,tuple(liner_upper_magnet_angle+index*360/int(liner_upper_magnet_count) for index in range(int(liner_upper_magnet_count))))
 ):
     for angle in angles:
