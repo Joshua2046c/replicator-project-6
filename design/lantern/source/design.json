@@ -26,7 +26,7 @@
           "target": "handle",
           "order": 0,
           "path": "design/lantern/source/parts/handle/000-handle.py",
-          "sha256": "ad0e7e57ff79d40a4e881a4e1008554b61588f94e3fa6345d0df50edd6b95bc1"
+          "sha256": "4877276ad5f5c4fe68000ade5c8999b0f5117e066336ca24197ac7bb90c46536"
         }
       ],
       "dependencies": []
@@ -40,7 +40,7 @@
           "target": "liner",
           "order": 0,
           "path": "design/lantern/source/parts/liner/000-liner.py",
-          "sha256": "5ed693962237c17f5066eb7a2b30643a08f0701f815d4b73e97cd0d0fdae1b04"
+          "sha256": "320948d207229c83d023efaabf4d895f02bfe45fc713beb38c0d7526f03ece68"
         }
       ],
       "dependencies": []
@@ -54,7 +54,7 @@
           "target": "shade",
           "order": 0,
           "path": "design/lantern/source/parts/shade/000-shade.py",
-          "sha256": "b8fe27a39dd6b324906ada821acc3694bedfa90da32d60fce87d270ab9809604"
+          "sha256": "47232367ccf75883eef516459f7dff25337181792e28125aaba75ab5cc2de296"
         }
       ],
       "dependencies": []
@@ -91,10 +91,10 @@
     {
       "id": "handle",
       "target": "handle",
-      "label": "折脚拱形提手",
+      "label": "翘头横梁提手",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "feca3c1343c9bf3dd4db5a9809c03b0987a4630874b19b321d9aed6a0304ae97",
+      "shapeHash": "3f2863bd1548407dae3b1f3a376ca15f5b3c311cc683ff3fd3be16a82309dcc3",
       "transform": {
         "positionMm": [
           0,
@@ -121,7 +121,7 @@
       "label": "直筒镂空内胆",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "56794208631009b869e1b2ef506ae08fe57b38da978f4994cbf684ab070269da",
+      "shapeHash": "1a4208e9567e44fa8423713c33cd066f282d01e371a7d2b35ced34a0fd08ce94",
       "transform": {
         "positionMm": [
           0,
@@ -145,10 +145,10 @@
     {
       "id": "shade",
       "target": "shade",
-      "label": "薄壁竖纹灯罩",
+      "label": "圆弧直筒波纹灯罩",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "61fde2c621d922be43fe3bc42d14dafad96dbb63e8a3573e34d300c4be4f0832",
+      "shapeHash": "e4631d044f703f06692be69e5756ff017cbe25ddb426ee8a91056ccff64762fd",
       "transform": {
         "positionMm": [
           0,
@@ -172,7 +172,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T23:37:14.628Z",
+  "updatedAt": "2026-09-25T08:21:37.199Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -191,13 +191,20 @@
       "handle_center_spacing": 130,
       "handle_band_width": 10,
       "handle_thickness": 10,
-      "handle_height": 198,
+      "handle_height": 206,
       "handle_tenon_size": 7.8,
       "handle_tenon_length": 8,
       "handle_edge_radius": 0.7,
       "handle_foot_spacing": 102,
       "handle_jog_start": 4,
-      "handle_jog_height": 20
+      "handle_jog_height": 20,
+      "handle_beam_width": 180,
+      "handle_beam_flat_width": 100,
+      "handle_beam_rise": 14,
+      "handle_beam_height": 12,
+      "handle_beam_depth": 14,
+      "handle_beam_tip_height": 8,
+      "handle_beam_tip_bevel": 4
     },
     "liner": {
       "liner_floor_thickness": 6,
@@ -216,13 +223,13 @@
       "liner_top_thickness": 5,
       "liner_slot_count": 12,
       "liner_slot_width": 9,
-      "liner_slot_angle": -90
+      "liner_slot_angle": -90,
+      "liner_upper_magnet_count": 2,
+      "liner_upper_magnet_angle": 0
     },
     "shade": {
       "shade_height": 76,
       "shade_belly_diameter": 106,
-      "shade_waist_diameter": 99,
-      "shade_neck_diameter": 72.8,
       "shade_wall_thickness": 1.8,
       "shade_ring_outer_diameter": 94,
       "shade_ring_inner_diameter": 69.2,
@@ -232,9 +239,8 @@
       "shade_magnet_pocket_diameter": 7.2,
       "shade_magnet_pocket_depth": 2.15,
       "shade_magnet_radius": 39.2,
-      "shade_wire_width": 8,
-      "shade_wire_height": 6,
-      "shade_wire_angle": -90
+      "shade_magnet_count": 2,
+      "shade_magnet_angle": 0
     }
   }
 }

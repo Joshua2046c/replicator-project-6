@@ -1,61 +1,121 @@
 {
-  "cad_revision": "bb988a989c828dfce81747b29e75fabd0438ee6286cd6d80702b793fd2ee7769",
-  "export_id": "export-b5e4081f1c5277658ca20789511a6e53",
-  "method": "cad.inspect exact measurements, collision and bounding boxes; cad.look visual review; source parameter and placement consistency checks",
+  "cad_revision": "3e1b6bc6aeb6b7791e1985740e3c7aead5fc81df3f97daa740cf6bebe5cf0e0b",
+  "export_id": "export-cfa25840fb57574f5817fed4d6e9c91b",
+  "export_status": "handoff",
+  "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt.",
   "measured_results": {
     "valid_solids": 4,
     "assembly_envelope_mm": [
-      140,
+      180,
       114,
-      210
+      218
+    ],
+    "shade_envelope_mm": [
+      109.6,
+      109.6,
+      76
     ],
     "interfering_pairs": 0,
     "undetermined_pairs": 0,
-    "light_pocket_diameter_mm": 60.6,
-    "light_cup_available_height_mm": 22,
-    "specified_light_thickness_mm": 8,
-    "liner_wire_notch_width_mm": 8,
-    "handle_base_gap_mm": 0
+    "handle_shade_minimum_gap_mm": 5.0292
   },
   "source_parameter_checks": {
+    "shade_magnet_positions_mm": [
+      [
+        -39.2,
+        0,
+        32
+      ],
+      [
+        39.2,
+        0,
+        32
+      ]
+    ],
+    "liner_upper_magnet_positions_mm": [
+      [
+        -39.2,
+        0,
+        32
+      ],
+      [
+        39.2,
+        0,
+        32
+      ]
+    ],
+    "upper_magnet_count_per_part": 2,
+    "lower_magnet_count_per_part": 3,
+    "total_magnets": 10,
     "magnet_pocket_diameter_mm": 7.2,
     "magnet_pocket_depth_mm": 2.15,
-    "paired_magnet_pattern_radius_mm": 39.2,
-    "paired_magnet_angles_deg": [
-      0,
-      120,
-      240
+    "shade_wire_notch_present": false,
+    "liner_wire_width_mm": 8,
+    "shade_wave_count": 40,
+    "shade_wave_radial_depth_mm": 1.8,
+    "shade_straight_nominal_radial_wall_range_mm": [
+      1.8,
+      3.6
     ],
-    "magnetic_interface_heights_mm": [
-      4,
-      32
-    ],
-    "square_tenon_centres_x_mm": [
-      -51,
-      51
-    ],
-    "square_tenon_size_mm": 7.8,
-    "square_socket_size_mm": 8.1,
-    "tenon_engagement_mm": 8,
+    "shade_end_round_radius_mm": 7.8,
+    "shade_top_opening_mm": 90.4,
     "shade_lower_opening_mm": 69.2,
-    "liner_top_outer_diameter_mm": 68.4,
-    "sleeve_radial_clearance_mm": 0.4,
-    "wire_notch_direction_deg": -90,
+    "liner_outer_diameter_mm": 68.4,
+    "light_pocket_diameter_mm": 60.6,
+    "light_module_mm": [
+      60,
+      8
+    ],
     "requirements_digest_matches_bom": true
+  },
+  "unchanged_object_evidence": {
+    "previous_revision": "e9ac5896ff7cf52826ff079996f1a8761752e2204c885f534ee147ddbfd1df2a",
+    "objects": [
+      "base",
+      "handle"
+    ],
+    "shape_hashes": {
+      "base": "ad6e533fb744ace47ad1b0d20d31817711a7428f41d30b091a7c6cf12391f479",
+      "handle": "3f2863bd1548407dae3b1f3a376ca15f5b3c311cc683ff3fd3be16a82309dcc3"
+    },
+    "note": "Shape hashes and placements match the design opened at query start; previous unexported handle revision is included in this successful handoff."
   },
   "visual_review": {
     "views": [
-      "assembled isometric",
-      "front during simplification",
-      "liner and tray with shade hidden",
-      "shade underside"
+      "assembled iso",
+      "isolated shade iso",
+      "shade bottom",
+      "liner top"
     ],
-    "finding": "Four separate parts. Circular tray has no projecting ears; handle feet jog inward to tray sockets. Straight lamp cup and integral slotted tube replace the conical pedestal, stacked flanges and three-post frame. Shade underside shows three magnet pockets and an open wire recess. One necessary shade magnet ring remains. Hidden construction is a design default, not a photographed fact."
+    "finding": "Straight cylindrical silhouette with rounded upper/lower transitions and 40 visible longitudinal waves. No waist or shade wire notch. Shade bottom and liner top each show two opposite pockets; base and handle retain their existing shapes."
+  },
+  "wire_route": {
+    "description": "Original liner recess retained. Cable exits exposed lamp cup above base rim Z12 and below shade bottom Z32; keep wire out of magnetic mating plane.",
+    "actual_cable_trial": false
+  },
+  "export_checks": {
+    "step_sha256": "7911c8c08f79e8a5e9abc1756dd6ffaa39a1e3780ef73acde4d0149658a3bd8c",
+    "bytes": 5158910,
+    "preview_refreshed": true,
+    "interference": {
+      "summary": "No interference across 6 object pairs.",
+      "counts": {
+        "objects": 4,
+        "pairs": 6,
+        "exact": 4,
+        "cached": 1,
+        "interference": 0,
+        "undeclared": 0,
+        "over_budget": 0,
+        "undetermined": 0
+      },
+      "overlaps": []
+    }
   },
   "limits": [
-    "No physical printing or fit trial performed.",
-    "Shade wall is nominally radial 1.8 mm, with fluted inner and outer profiles; normal wall thickness is not certified uniform.",
-    "Magnet holding force, adhesive durability, light temperature and translucency require a physical prototype.",
-    "Original lamp electrical ratings and connector identity are not provided; retain original wiring and matched supply."
+    "No physical printing, cable fit or load test performed.",
+    "Straight-section wall range is nominal radial thickness; rounded shoulders and magnet ring are thicker, not constant normal thickness.",
+    "Two opposed magnet pairs permit a 180-degree orientation ambiguity; magnet polarity and holding force require assembly testing.",
+    "Original lamp voltage, power and connector are unspecified; retain original cable and matched supply."
   ]
 }

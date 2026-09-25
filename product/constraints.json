@@ -1,14 +1,82 @@
 {
-  "units":"mm",
-  "external_parts":{"light":{"diameter":60,"thickness":8,"evidence":"user image and explicit dimensions"},"magnets":{"diameter":7,"thickness":2,"quantity":12,"evidence":"user dimensions"}},
-  "interfaces":{
-    "base_liner":{"z":4,"magnet_radius":39.2,"angles_deg":[0,120,240]},
-    "liner_shade":{"z":32,"magnet_radius":39.2,"angles_deg":[0,120,240],"sleeve_inner_diameter":69.2,"liner_outer_diameter":68.4},
-    "magnet_pockets":{"diameter":7.2,"depth":2.15},
-    "handle":{"socket_centers_x":[-51,51],"socket_center_y":0,"socket_top_z":12,"square_socket":8.1,"socket_depth":8.2,"square_tenon":7.8,"engagement":8},
-    "light":{"pocket_diameter":60.6,"seat_z":10,"light_top_z":18,"cup_rim_z":32},
-    "wire":{"direction":"negative Y","width":8,"liner_open_top_z":32,"liner_floor_z":10,"shade_bottom_z":32,"shade_notch_height":6}
+  "units": "mm",
+  "external_parts": {
+    "light": {
+      "diameter": 60,
+      "thickness": 8,
+      "evidence": "user image and explicit dimensions"
+    },
+    "magnets": {
+      "diameter": 7,
+      "thickness": 2,
+      "quantity": 10,
+      "evidence": "user dimensions"
+    }
   },
-  "defaults":{"manufacturing":"FDM PETG","shade_nominal_radial_wall":1.8,"adhesive_retained_magnets":true,"adhesive_retained_tenons":true},
-  "advisories":["原装灯电压、功率及接头规格未提供，保留原配电源与线束。","磁铁孔和方桩配合需打印试装；灯罩透光和上肩支撑需切片检查。"]
+  "interfaces": {
+    "base_liner": {
+      "z": 4,
+      "magnet_radius": 39.2,
+      "angles_deg": [
+        0,
+        120,
+        240
+      ]
+    },
+    "liner_shade": {
+      "z": 32,
+      "magnet_radius": 39.2,
+      "angles_deg": [
+        0,
+        180
+      ],
+      "sleeve_inner_diameter": 69.2,
+      "liner_outer_diameter": 68.4
+    },
+    "magnet_pockets": {
+      "diameter": 7.2,
+      "depth": 2.15
+    },
+    "handle": {
+      "socket_centers_x": [
+        -51,
+        51
+      ],
+      "socket_center_y": 0,
+      "socket_top_z": 12,
+      "square_socket": 8.1,
+      "socket_depth": 8.2,
+      "square_tenon": 7.8,
+      "engagement": 8
+    },
+    "light": {
+      "pocket_diameter": 60.6,
+      "seat_z": 10,
+      "light_top_z": 18,
+      "cup_rim_z": 32
+    },
+    "wire": {
+      "direction": "negative Y",
+      "width": 8,
+      "liner_open_top_z": 32,
+      "liner_floor_z": 10,
+      "shade_bottom_z": 32,
+      "shade_notch_height": 0,
+      "routing_note": "内胆原走线槽保留；导线在底座盘沿Z12上方、灯罩底面Z32下方从外露灯杯处引出，不跨越磁吸面。"
+    }
+  },
+  "defaults": {
+    "manufacturing": "FDM PETG",
+    "shade_nominal_radial_wall": 1.8,
+    "adhesive_retained_magnets": true,
+    "adhesive_retained_tenons": true,
+    "shade_straight_wall_range_mm": [
+      1.8,
+      3.6
+    ]
+  },
+  "advisories": [
+    "原装灯电压、功率及接头规格未提供，保留原配电源与线束。",
+    "磁铁孔和方桩配合需打印试装；灯罩透光和上肩支撑需切片检查。"
+  ]
 }

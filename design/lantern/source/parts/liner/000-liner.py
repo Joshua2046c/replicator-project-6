@@ -14,6 +14,8 @@ liner_magnet_pocket_diameter = param("liner_magnet_pocket_diameter",7.2)
 liner_magnet_pocket_depth = param("liner_magnet_pocket_depth",2.15)
 liner_lower_magnet_radius = param("liner_lower_magnet_radius",39.2)
 liner_upper_magnet_radius = param("liner_upper_magnet_radius",39.2)
+liner_upper_magnet_count = param("liner_upper_magnet_count",2)
+liner_upper_magnet_angle = param("liner_upper_magnet_angle",0.0)
 liner_wire_width = param("liner_wire_width",8.0)
 liner_wire_angle = param("liner_wire_angle",-90.0)
 liner = Cylinder(liner_cup_outer_diameter/2,liner_cup_height,align=(Align.CENTER,Align.CENTER,Align.MIN))
@@ -25,8 +27,11 @@ for index in range(int(liner_slot_count)):
     window=Rot(0,0,angle)*Pos(liner_top_outer_diameter/2,0,liner_cup_height)*Box(liner_top_outer_diameter/2,liner_slot_width,slot_height,align=(Align.CENTER,Align.CENTER,Align.MIN))
     tube -= window
 liner += tube
-for angle in (0,120,240):
-    for radius,start_z in ((liner_lower_magnet_radius,0),(liner_upper_magnet_radius,liner_cup_height-liner_magnet_pocket_depth)):
+for radius,start_z,angles in (
+    (liner_lower_magnet_radius,0,(0,120,240)),
+    (liner_upper_magnet_radius,liner_cup_height-liner_magnet_pocket_depth,tuple(liner_upper_magnet_angle+index*360/int(liner_upper_magnet_count) for index in range(int(liner_upper_magnet_count))))
+):
+    for angle in angles:
         liner -= Pos(radius*cos(radians(angle)),radius*sin(radians(angle)),start_z)*Cylinder(liner_magnet_pocket_diameter/2,liner_magnet_pocket_depth,align=(Align.CENTER,Align.CENTER,Align.MIN))
 liner -= Rot(0,0,liner_wire_angle)*Pos(liner_cup_outer_diameter/2,0,liner_floor_thickness)*Box(liner_cup_outer_diameter,liner_wire_width,liner_cup_height-liner_floor_thickness,align=(Align.CENTER,Align.CENTER,Align.MIN))
 assert liner_floor_thickness > liner_magnet_pocket_depth

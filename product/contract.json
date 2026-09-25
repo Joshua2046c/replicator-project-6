@@ -4,21 +4,102 @@
   "deliverable_intent": "printable_part",
   "summary": "四件式中式磁吸提灯，含提手、底座、内胆和薄壁灯罩。",
   "required_interfaces": [
-    {"id":"light_fit","kind":"internal_fit","description":"容纳 Ø60×8 mm 原装圆饼灯组","source":"user_requested","required":true},
-    {"id":"magnet_joints","kind":"mechanical_mating","description":"Ø7×2 mm 磁铁连接底座、内胆及灯罩","source":"user_requested","required":true},
-    {"id":"square_tenons","kind":"mechanical_mating","description":"提手方桩与底座配对方孔","source":"user_requested","required":true},
-    {"id":"wire_exit","kind":"clearance","description":"内胆和灯罩底部开放走线缺口对齐","source":"user_requested","required":true}
+    {
+      "id": "light_fit",
+      "kind": "internal_fit",
+      "description": "容纳 Ø60×8 mm 原装圆饼灯组",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "magnet_joints",
+      "kind": "mechanical_mating",
+      "description": "Ø7×2 mm磁铁；灯罩与内胆两处配对，内胆与底座三处配对",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "square_tenons",
+      "kind": "mechanical_mating",
+      "description": "提手方桩与底座配对方孔",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "wire_exit",
+      "kind": "clearance",
+      "description": "保留内胆开放走线缺口，从外露灯杯引出；灯罩底部不开槽",
+      "source": "user_requested",
+      "required": true
+    }
   ],
   "external_references": [
-    {"id":"lantern_reference_side","source":"user_requested","description":"用户补充角度，要求简化结构","path":"product/references/uploads/20260924T231819919Z-1-image.png"},
-    {"id":"lantern_reference","source":"user_requested","description":"中式提灯外观参考","path":"product/references/uploads/20260924T224920191Z-1-ishot-2026-09-25-6-22-22.png"},
-    {"id":"light_reference","source":"user_requested","description":"圆饼灯尺寸 Ø60 mm、厚 8 mm","path":"product/references/uploads/20260924T224920191Z-2-image.png"}
+    {
+      "id": "shade_revision_reference",
+      "source": "user_requested",
+      "description": "取消双鼓收腰，改为上下圆弧过渡直筒及纵向波纹；取消灯罩走线槽，定位磁铁两处",
+      "path": "product/references/uploads/20260925T081542750Z-1-mark.png"
+    },
+    {
+      "id": "handle_reference",
+      "source": "user_requested",
+      "description": "双立杆、两端上翘横梁式提手；只参考提手，不改成图中盒体",
+      "path": "product/references/uploads/20260925T073447373Z-1-20260925140914aicy.jpg"
+    },
+    {
+      "id": "lantern_reference_side",
+      "source": "user_requested",
+      "description": "用户补充角度，要求简化结构",
+      "path": "product/references/uploads/20260924T231819919Z-1-image.png"
+    },
+    {
+      "id": "lantern_reference",
+      "source": "user_requested",
+      "description": "中式提灯外观参考",
+      "path": "product/references/uploads/20260924T224920191Z-1-ishot-2026-09-25-6-22-22.png"
+    },
+    {
+      "id": "light_reference",
+      "source": "user_requested",
+      "description": "圆饼灯尺寸 Ø60 mm、厚 8 mm",
+      "path": "product/references/uploads/20260924T224920191Z-2-image.png"
+    }
   ],
   "assembly_story": {
-    "installation":"胶接方桩提手；配对粘入磁铁；放入原装灯和线；内胆磁吸到底座；灯罩磁吸到内胆。",
-    "maintenance":"上提灯罩即可检查灯和线，再提内胆使底座分离。",
-    "user_access":["顶部灯组取放孔","后下部开放走线槽","两层可分离磁吸接口"]
+    "installation": "胶接方桩提手；配对粘入磁铁；放入原装灯和线；内胆磁吸到底座；灯罩磁吸到内胆。",
+    "maintenance": "上提灯罩即可检查灯和线，再提内胆使底座分离。",
+    "user_access": [
+      "顶部灯组取放孔",
+      "内胆外露灯杯走线槽",
+      "两层可分离磁吸接口"
+    ]
   },
-  "cad": {"requirement":"required","designs":[{"role":"lantern","design_id":"lantern","description":"Four-part Chinese lantern","delivery_target":"printable_part","required_formats":["step"],"interface_ids":["light_fit","magnet_joints","square_tenons","wire_exit"],"reference_ids":["lantern_reference","light_reference","lantern_reference_side"]}]},
+  "cad": {
+    "requirement": "required",
+    "designs": [
+      {
+        "role": "lantern",
+        "design_id": "lantern",
+        "description": "Four-part Chinese lantern",
+        "delivery_target": "printable_part",
+        "required_formats": [
+          "step"
+        ],
+        "interface_ids": [
+          "light_fit",
+          "magnet_joints",
+          "square_tenons",
+          "wire_exit"
+        ],
+        "reference_ids": [
+          "lantern_reference",
+          "light_reference",
+          "lantern_reference_side",
+          "handle_reference",
+          "shade_revision_reference"
+        ]
+      }
+    ]
+  },
   "open_questions": []
 }

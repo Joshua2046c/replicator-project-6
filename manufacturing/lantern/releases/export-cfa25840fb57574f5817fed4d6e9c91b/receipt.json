@@ -1,0 +1,135 @@
+{
+  "designId": "lantern",
+  "revision": "3e1b6bc6aeb6b7791e1985740e3c7aead5fc81df3f97daa740cf6bebe5cf0e0b",
+  "schemaVersion": 2,
+  "exportId": "export-cfa25840fb57574f5817fed4d6e9c91b",
+  "generatedAt": "2026-09-25T08:21:37.199Z",
+  "designSha256": "8c40c613868dce8852dd3ed0ced7e0c2f923fa8135048e4b023c9906b3946c3b",
+  "role": "lantern",
+  "stateHash": "1418ba88ef0dc5e015623bb143164646a8abfde0dd7be8bd052e7a12ecbc3556",
+  "stateManifest": {
+    "schemaVersion": 3,
+    "designId": "lantern",
+    "role": "lantern",
+    "design": {
+      "revision": "3e1b6bc6aeb6b7791e1985740e3c7aead5fc81df3f97daa740cf6bebe5cf0e0b",
+      "designSha256": "d18808b193e70edeed8c3ff46a4103e02a9dbec254055af4b2526c9311369427",
+      "manifestSha256": "aa07242a38eb22c2e3c03d11b6b97e12fb698d1797fd5521d929c7c0074d7f9a",
+      "stepSha256": "7911c8c08f79e8a5e9abc1756dd6ffaa39a1e3780ef73acde4d0149658a3bd8c",
+      "pcbReleases": []
+    },
+    "brief": {
+      "path": "design/lantern/README.md",
+      "sha256": "bf33488a427ce10926d9ad683e5719bdea9a973e3f285ca26af89502b868d0c2"
+    },
+    "requirement": {
+      "artifactContractPath": "product/contract.json",
+      "artifactContractSha256": "42fe6cc776dda60f97f07e5aa2b31a4f52b26bcf52c5d7bb8564af76009eb9ca",
+      "designRequirementSha256": "f0671efe087ffdf0f13e9eae9b677a76e52b0c5e262ab6d706a83cbe567a9262",
+      "inputs": [
+        {
+          "role": "external-reference",
+          "id": "handle_reference",
+          "path": "product/references/uploads/20260925T073447373Z-1-20260925140914aicy.jpg",
+          "sha256": "7b418a534436fa3644e2940213ca164ce7a12049eff457917e082cdfb63ae5a7",
+          "sizeBytes": 559661
+        },
+        {
+          "role": "external-reference",
+          "id": "lantern_reference",
+          "path": "product/references/uploads/20260924T224920191Z-1-ishot-2026-09-25-6-22-22.png",
+          "sha256": "de1113e4e39697972ed2098933c6b09521408e4fc976663bc083dd3c6e08a5f1",
+          "sizeBytes": 436205
+        },
+        {
+          "role": "external-reference",
+          "id": "lantern_reference_side",
+          "path": "product/references/uploads/20260924T231819919Z-1-image.png",
+          "sha256": "ae76275d70264ca50c1c6c0ea645a65a88b98213156b62a4375f68c27e3990d6",
+          "sizeBytes": 146572
+        },
+        {
+          "role": "external-reference",
+          "id": "light_reference",
+          "path": "product/references/uploads/20260924T224920191Z-2-image.png",
+          "sha256": "6561719137899fa6bdec45f833d937160d7f7c577f0ccb4f55b8ae6b9fb412c5",
+          "sizeBytes": 88071
+        },
+        {
+          "role": "external-reference",
+          "id": "shade_revision_reference",
+          "path": "product/references/uploads/20260925T081542750Z-1-mark.png",
+          "sha256": "4ec226c6a8b584ca62cb0ab9d580527139a533392a8b996dcf92949f14a11099",
+          "sizeBytes": 1170059
+        }
+      ]
+    },
+    "delivery": {
+      "target": "printable_part",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateHash": "1418ba88ef0dc5e015623bb143164646a8abfde0dd7be8bd052e7a12ecbc3556"
+  },
+  "buildArtifacts": {
+    "manifestSha256": "aa07242a38eb22c2e3c03d11b6b97e12fb698d1797fd5521d929c7c0074d7f9a",
+    "stepSha256": "7911c8c08f79e8a5e9abc1756dd6ffaa39a1e3780ef73acde4d0149658a3bd8c"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "f4939328ef685300fcdaa250c860428f6b9e009d10931b20d36728e55e0029e4"
+  },
+  "sourceHashes": {
+    "base/base": "47f3e6eaf8af7733b396c1dc5f470676e6d02db4a82902c19f49c267e101486d",
+    "handle/handle": "4877276ad5f5c4fe68000ade5c8999b0f5117e066336ca24197ac7bb90c46536",
+    "liner/liner": "320948d207229c83d023efaabf4d895f02bfe45fc713beb38c0d7526f03ece68",
+    "shade/shade": "47232367ccf75883eef516459f7dff25337181792e28125aaba75ab5cc2de296"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "base": "ad6e533fb744ace47ad1b0d20d31817711a7428f41d30b091a7c6cf12391f479",
+    "handle": "3f2863bd1548407dae3b1f3a376ca15f5b3c311cc683ff3fd3be16a82309dcc3",
+    "liner": "1a4208e9567e44fa8423713c33cd066f282d01e371a7d2b35ced34a0fd08ce94",
+    "shade": "e4631d044f703f06692be69e5756ff017cbe25ddb426ee8a91056ccff64762fd"
+  },
+  "runtime": {
+    "manifestHash": "56a1de5d760e9f5c1dd991c57c86f24fbfb7da361b3d55b9d4cb65cdabe66a74",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyHash": "e8b3788bab31d790595e4c3306dda85dfe057c87a4fc64f7ef3eab254239b7ba"
+  },
+  "artifacts": [
+    {
+      "path": "manufacturing/lantern/releases/export-cfa25840fb57574f5817fed4d6e9c91b/model.step",
+      "role": "model/step",
+      "sha256": "7911c8c08f79e8a5e9abc1756dd6ffaa39a1e3780ef73acde4d0149658a3bd8c",
+      "sizeBytes": 5158910
+    }
+  ],
+  "interference": {
+    "summary": "No interference across 6 object pairs.",
+    "counts": {
+      "objects": 4,
+      "pairs": 6,
+      "exact": 4,
+      "cached": 1,
+      "interference": 0,
+      "undeclared": 0,
+      "over_budget": 0,
+      "undetermined": 0
+    },
+    "overlaps": []
+  },
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "199024ec12983ba08b9d0d826358872f",
+    "projectId": "1779d166-efca-4725-8922-e813a021aad6",
+    "receiptPath": "manufacturing/lantern/releases/export-cfa25840fb57574f5817fed4d6e9c91b/receipt.json",
+    "payloadSha256": "0f49ac5061892cd07196926b5f1e9148c802555795648b6e21f30fd87472041c",
+    "mac": "aaa2eb62f92edf9d48ebd8e4488da58e663ea58aab8bb247c76b85238fc4854d"
+  },
+  "status": "handoff"
+}
