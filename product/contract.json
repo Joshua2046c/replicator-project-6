@@ -76,6 +76,12 @@
       "source": "user_requested",
       "description": "灯罩向内略微收口，内胆不高过灯罩",
       "path": "product/references/uploads/20260925T142804664Z-1-mark.png"
+    },
+    {
+      "id": "rim_fluting_reference",
+      "source": "user_requested",
+      "description": "纵向凹槽必须延伸经过收口肩部至口沿",
+      "path": "product/references/uploads/20260925T143602053Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -111,7 +117,8 @@
           "lantern_reference_side",
           "handle_reference",
           "shade_revision_reference",
-          "rim_revision_reference"
+          "rim_revision_reference",
+          "rim_fluting_reference"
         ]
       }
     ]

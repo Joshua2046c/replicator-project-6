@@ -13,6 +13,7 @@ shade_magnet_pocket_depth = param("shade_magnet_pocket_depth",2.15)
 shade_magnet_radius = param("shade_magnet_radius",39.2)
 shade_magnet_count = param("shade_magnet_count",2)
 shade_magnet_angle = param("shade_magnet_angle",0.0)
+shade_rim_wave_depth = param("shade_rim_wave_depth",0.6)
 outer_radius=shade_belly_diameter/2+shade_rib_radius
 end_radius=shade_ring_outer_diameter/2
 outer_round=outer_radius-end_radius
@@ -28,31 +29,51 @@ assert shade_top_inset>=0 and top_inner_end>shade_ring_inner_diameter/2
 assert shade_height>outer_round+top_outer_round+shade_ring_height
 assert shade_ring_height>shade_magnet_pocket_depth
 assert shade_magnet_radius-shade_magnet_pocket_diameter/2>shade_ring_inner_diameter/2
-edges=[
+assert 0 < shade_rim_wave_depth <= shade_rib_radius
+shoulder_z=shade_height-top_outer_round
+def wave_wire(peak_radius, depth, height):
+    wave_edges=[]
+    for flute_index in range(int(shade_rib_count)):
+        points=[]
+        for sample_index in range(9):
+            angle=(flute_index+sample_index/8)*2*pi/int(shade_rib_count)
+            radius=peak_radius-depth*(1-cos(int(shade_rib_count)*angle))/2
+            points.append((radius*cos(angle),radius*sin(angle),height))
+        wave_edges.append(Edge.make_spline(points))
+    return Wire(wave_edges)
+lower_edges=[
+ Edge.make_line((0,0,0),(end_radius,0,0)),
  Edge.make_three_point_arc((end_radius,0,0),(end_radius+outer_round/sqrt(2),0,outer_round-outer_round/sqrt(2)),(outer_radius,0,outer_round)),
- Edge.make_line((outer_radius,0,outer_round),(outer_radius,0,shade_height-top_outer_round)),
- Edge.make_three_point_arc((outer_radius,0,shade_height-top_outer_round),(top_end_radius+top_outer_round/sqrt(2),0,shade_height-top_outer_round+top_outer_round/sqrt(2)),(top_end_radius,0,shade_height)),
- Edge.make_line((top_end_radius,0,shade_height),(top_inner_end,0,shade_height)),
- Edge.make_three_point_arc((top_inner_end,0,shade_height),(top_inner_end+top_inner_round/sqrt(2),0,shade_height-top_inner_round+top_inner_round/sqrt(2)),(inner_radius,0,shade_height-top_inner_round)),
- Edge.make_line((inner_radius,0,shade_height-top_inner_round),(inner_radius,0,shade_ring_height+inner_round)),
- Edge.make_three_point_arc((inner_radius,0,shade_ring_height+inner_round),(inner_end+inner_round/sqrt(2),0,shade_ring_height+inner_round-inner_round/sqrt(2)),(inner_end,0,shade_ring_height)),
- Edge.make_line((inner_end,0,shade_ring_height),(shade_ring_inner_diameter/2,0,shade_ring_height)),
- Edge.make_line((shade_ring_inner_diameter/2,0,shade_ring_height),(shade_ring_inner_diameter/2,0,0)),
- Edge.make_line((shade_ring_inner_diameter/2,0,0),(end_radius,0,0))
+ Edge.make_line((outer_radius,0,outer_round),(outer_radius,0,shoulder_z)),
+ Edge.make_line((outer_radius,0,shoulder_z),(0,0,shoulder_z)),
+ Edge.make_line((0,0,shoulder_z),(0,0,0))
 ]
-rounded_shell=revolve(Face(Wire(edges)),axis=Axis.Z)
-wave_edges=[]
-for flute_index in range(int(shade_rib_count)):
-    points=[]
-    for sample_index in range(9):
-        angle=(flute_index+sample_index/8)*2*pi/int(shade_rib_count)
-        radius=shade_belly_diameter/2+shade_rib_radius*(1+cos(int(shade_rib_count)*angle))/2
-        points.append((radius*cos(angle),radius*sin(angle),0))
-    wave_edges.append(Edge.make_spline(points))
-wave_prism=extrude(Face(Wire(wave_edges)),amount=shade_height)
-shade=rounded_shell & wave_prism
-assert rounded_shell.volume-shade.volume>shade_rib_radius*shade_height
-print("wave_removed_volume_mm3",rounded_shell.volume-shade.volume)
+lower_solid=revolve(Face(Wire(lower_edges)),axis=Axis.Z)
+wave_prism=extrude(Face(wave_wire(outer_radius,shade_rib_radius,0)),amount=shoulder_z)
+lower_solid=lower_solid & wave_prism
+shoulder_sections=[]
+for section_index in range(9):
+    sweep_angle=section_index*pi/16
+    blend=sin(sweep_angle)**2
+    peak_radius=top_end_radius+top_outer_round*cos(sweep_angle)+shade_rim_wave_depth*blend
+    depth=shade_rib_radius*(1-blend)+shade_rim_wave_depth*blend
+    height=shoulder_z+top_outer_round*sin(sweep_angle)
+    shoulder_sections.append(Face(wave_wire(peak_radius,depth,height)))
+upper_solid=loft(shoulder_sections)
+outer_solid=lower_solid+upper_solid
+cavity_edges=[
+ Edge.make_line((0,0,0),(shade_ring_inner_diameter/2,0,0)),
+ Edge.make_line((shade_ring_inner_diameter/2,0,0),(shade_ring_inner_diameter/2,0,shade_ring_height)),
+ Edge.make_line((shade_ring_inner_diameter/2,0,shade_ring_height),(inner_end,0,shade_ring_height)),
+ Edge.make_three_point_arc((inner_end,0,shade_ring_height),(inner_end+inner_round/sqrt(2),0,shade_ring_height+inner_round-inner_round/sqrt(2)),(inner_radius,0,shade_ring_height+inner_round)),
+ Edge.make_line((inner_radius,0,shade_ring_height+inner_round),(inner_radius,0,shade_height-top_inner_round)),
+ Edge.make_three_point_arc((inner_radius,0,shade_height-top_inner_round),(top_inner_end+top_inner_round/sqrt(2),0,shade_height-top_inner_round+top_inner_round/sqrt(2)),(top_inner_end,0,shade_height)),
+ Edge.make_line((top_inner_end,0,shade_height),(top_inner_end,0,shade_height+shade_wall_thickness)),
+ Edge.make_line((top_inner_end,0,shade_height+shade_wall_thickness),(0,0,shade_height+shade_wall_thickness)),
+ Edge.make_line((0,0,shade_height+shade_wall_thickness),(0,0,0))
+]
+shade=outer_solid-revolve(Face(Wire(cavity_edges)),axis=Axis.Z)
+print("rim_wave_depth_mm",shade_rim_wave_depth,"rim_radial_wall_min_mm",top_end_radius-top_inner_end)
 for index in range(int(shade_magnet_count)):
     angle=shade_magnet_angle+index*360/int(shade_magnet_count)
     pocket=Pos(shade_magnet_radius*cos(radians(angle)),shade_magnet_radius*sin(radians(angle)),0)*Cylinder(shade_magnet_pocket_diameter/2,shade_magnet_pocket_depth,align=(Align.CENTER,Align.CENTER,Align.MIN))

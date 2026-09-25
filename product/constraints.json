@@ -35,8 +35,9 @@
       "top_rim_z": 108,
       "liner_top_z": 106,
       "liner_total_height": 102,
-      "shade_top_outer_diameter": 86,
-      "shade_top_opening_diameter": 82.4
+      "shade_top_outer_diameter": 87.2,
+      "shade_top_opening_diameter": 82.4,
+      "shade_top_outer_valley_diameter": 86
     },
     "magnet_pockets": {
       "diameter": 7.2,
@@ -78,6 +79,11 @@
     "shade_straight_wall_range_mm": [
       1.8,
       3.6
+    ],
+    "shade_rim_wave_radial_depth_mm": 0.6,
+    "shade_rim_radial_wall_range_mm": [
+      1.8,
+      2.4
     ]
   },
   "advisories": [

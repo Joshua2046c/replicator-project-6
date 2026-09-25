@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "cbae4ed27b2ada8f0452771da536b0bd9791202e1481071e080ca1ef03cfa235",
+  "requirements_digest": "9c2b6c2d3c2611257fee878ffb37f16147fdea0d5873b3a1a89d098cfaa87f4c",
   "items": [
     {
       "id": "handle",
@@ -28,7 +28,7 @@
     {
       "id": "shade",
       "role": "printed_part",
-      "name": "上口内收圆弧直筒波纹灯罩，半透明PETG，绿色",
+      "name": "凹槽延伸至收口的圆弧直筒灯罩，半透明PETG，绿色",
       "quantity": 1,
       "source": "default"
     },

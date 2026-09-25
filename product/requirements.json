@@ -140,6 +140,14 @@
     "liner_recess_below_rim_mm": {
       "value": 2,
       "source": "default"
+    },
+    "shade_fluting_extent": {
+      "value": "longitudinal grooves continue over the inward-rounded upper shoulder to the rim",
+      "source": "user"
+    },
+    "shade_rim_wave_depth_mm": {
+      "value": 0.6,
+      "source": "default"
     }
   },
   "open_questions": []
