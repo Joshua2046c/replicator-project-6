@@ -1,31 +1,31 @@
 {
   "designId": "lantern",
-  "revision": "d2bfb90e5b28c8481add3ba5f8b8229d4fcc4be1bdb3adea49ed7d9a2c1ab808",
+  "revision": "97fe6e8a56aafad8bd66aa3f929b6ab3df5001d57141b2f5393390cc8f12203c",
   "schemaVersion": 2,
-  "exportId": "export-d25538682db288e6fadbf6e2b36a3668",
-  "generatedAt": "2026-09-25T14:54:24.636Z",
-  "designSha256": "f0b6da931bf50329077f4bceb01affca261f396ac456fce68d6a47b89621e2c6",
+  "exportId": "export-5e409efdec3e241620127d87db124554",
+  "generatedAt": "2026-09-25T15:12:10.960Z",
+  "designSha256": "5bbd4fd3a1be59ac2463b36dda0e1b764a9a9615099a7d5b5f30ef5bef8f6b9b",
   "role": "lantern",
-  "stateHash": "5d42b54ecd2fee48944dc38c7f29469fe0e627dc1246f9cf3903985ff2d8aa83",
+  "stateHash": "6d1381d924c2f669b4cda4d5bb8981de9e6b8b00d47cb6cb61c23dcd1c2f760a",
   "stateManifest": {
     "schemaVersion": 3,
     "designId": "lantern",
     "role": "lantern",
     "design": {
-      "revision": "d2bfb90e5b28c8481add3ba5f8b8229d4fcc4be1bdb3adea49ed7d9a2c1ab808",
-      "designSha256": "e85c028308576c7238cf0ce37bf5f6a18c19bf777e3b99bd86555f73c1f0ab57",
-      "manifestSha256": "668cd579c92352777febc1d5119f7b0c267c7bb87cd8f2322bb9b6fe7c71ab98",
-      "stepSha256": "aacce23fe8584940deabc00d1a500ae53bc7a3627244078b413123a27ed2c457",
+      "revision": "97fe6e8a56aafad8bd66aa3f929b6ab3df5001d57141b2f5393390cc8f12203c",
+      "designSha256": "e1a27cf1b580f350bd508d04454fc2598035d4135fe05a605ac5e643a71d372f",
+      "manifestSha256": "13d8fa0590c5f6eed1cb4aac37148f215d716ebd31b5ef81aba264e7ad975647",
+      "stepSha256": "11153377781ebb48738338704af29e5395083332b55ba6e89271421101ec5696",
       "pcbReleases": []
     },
     "brief": {
       "path": "design/lantern/README.md",
-      "sha256": "790bd571aa88f9f008f5e0f12022084c0cbf9364968414b341ebd4a3cd43c532"
+      "sha256": "a42baa4fe80c43c55898cdcd2a0d2103ef4cf914048245401426163e4ab506f3"
     },
     "requirement": {
       "artifactContractPath": "product/contract.json",
-      "artifactContractSha256": "f83429720258684d56fa356b27e9f790cd618de88fcf62fde0f1a5dfb6f20037",
-      "designRequirementSha256": "3f5229a5c2095805fb4b77ff220ea55f8a6707a3542299e561bc032ff0cc3a3d",
+      "artifactContractSha256": "4e9e81c3d34f07d88c0df709242c6454bbf368619dd41ca5a63559071c07949c",
+      "designRequirementSha256": "428f94362fe288026c876fdea02b8689ceee026e7749db53531a6bf58687a7db",
       "inputs": [
         {
           "role": "external-reference",
@@ -33,6 +33,13 @@
           "path": "product/references/uploads/20260925T144813352Z-1-mark.png",
           "sha256": "03fb9e39e8f7235aaec1dd7507a38908084a532a3321547ebb2a47275709e7c8",
           "sizeBytes": 474631
+        },
+        {
+          "role": "external-reference",
+          "id": "beam_joint_reference",
+          "path": "product/references/uploads/20260925T150652787Z-1-mark.png",
+          "sha256": "5906249795c8386f4ffb4fc9584ecf634ce26d3cd47186aeccc88c791f9e8ec7",
+          "sizeBytes": 386656
         },
         {
           "role": "external-reference",
@@ -98,11 +105,11 @@
         "step"
       ]
     },
-    "stateHash": "5d42b54ecd2fee48944dc38c7f29469fe0e627dc1246f9cf3903985ff2d8aa83"
+    "stateHash": "6d1381d924c2f669b4cda4d5bb8981de9e6b8b00d47cb6cb61c23dcd1c2f760a"
   },
   "buildArtifacts": {
-    "manifestSha256": "668cd579c92352777febc1d5119f7b0c267c7bb87cd8f2322bb9b6fe7c71ab98",
-    "stepSha256": "aacce23fe8584940deabc00d1a500ae53bc7a3627244078b413123a27ed2c457"
+    "manifestSha256": "13d8fa0590c5f6eed1cb4aac37148f215d716ebd31b5ef81aba264e7ad975647",
+    "stepSha256": "11153377781ebb48738338704af29e5395083332b55ba6e89271421101ec5696"
   },
   "exportAlgorithm": {
     "version": 1,
@@ -110,14 +117,16 @@
   },
   "sourceHashes": {
     "base/base": "8a3776dcb58806822d8b6a2b62065ba7d017eb525d3ec4072b4c9ee5ad5d1d67",
-    "handle/handle": "4877276ad5f5c4fe68000ade5c8999b0f5117e066336ca24197ac7bb90c46536",
+    "handle/handle": "2106f903ae5054022d5835ef1a34f858aba487d3ced43c9f318fdb629851a350",
     "liner/liner": "f8bbc6c1cfe26dacc17672d5a160e5f739a185ad3e7c978752b057f486cced27",
     "shade/shade": "674d0549d96d906bc67451cb56caf99823d7c0cd7e5ab296f15c74dfb26cc8a4"
   },
   "assetHashes": {},
   "shapeHashes": {
     "base": "5269990fb65970016940ec8b0116d2fbc9a50372d8923da9baf443d3e33cc7d5",
-    "handle": "bbe95351bd50af5b9d5408ff4a48a4cb18a6ebfaa7843664d3f0ef8ba8ff2518",
+    "handle": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
+    "handle_left_rod": "217de6cc7544f1f8cbfb7423bebba82273fcd55019a11ee36d9b1473c9a21015",
+    "handle_right_rod": "a83001b1b6b2f0706217926fcc89e037a135528aa8a0907da57b8727109e4e25",
     "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
     "shade": "eb0746f892971986fa139ebc7c7ea9e9c57b585bb0038afcd75352860a5934ed"
   },
@@ -130,19 +139,19 @@
   },
   "artifacts": [
     {
-      "path": "manufacturing/lantern/releases/export-d25538682db288e6fadbf6e2b36a3668/model.step",
+      "path": "manufacturing/lantern/releases/export-5e409efdec3e241620127d87db124554/model.step",
       "role": "model/step",
-      "sha256": "aacce23fe8584940deabc00d1a500ae53bc7a3627244078b413123a27ed2c457",
-      "sizeBytes": 5809679
+      "sha256": "11153377781ebb48738338704af29e5395083332b55ba6e89271421101ec5696",
+      "sizeBytes": 5922308
     }
   ],
   "interference": {
-    "summary": "No interference across 6 object pairs.",
+    "summary": "No interference across 15 object pairs.",
     "counts": {
-      "objects": 4,
-      "pairs": 6,
+      "objects": 6,
+      "pairs": 15,
       "exact": 0,
-      "cached": 5,
+      "cached": 8,
       "interference": 0,
       "undeclared": 0,
       "over_budget": 0,
@@ -155,9 +164,9 @@
     "algorithm": "hmac-sha256",
     "keyId": "199024ec12983ba08b9d0d826358872f",
     "projectId": "1779d166-efca-4725-8922-e813a021aad6",
-    "receiptPath": "manufacturing/lantern/releases/export-d25538682db288e6fadbf6e2b36a3668/receipt.json",
-    "payloadSha256": "e062b6736b4457479b5297c05381e3c254d8dc06b22977c27a97a8ec05acfbb4",
-    "mac": "286b6473c3bd5926493c2904dc9bac8d78b732372bae2a70b3669856f749ed32"
+    "receiptPath": "manufacturing/lantern/releases/export-5e409efdec3e241620127d87db124554/receipt.json",
+    "payloadSha256": "b19a18b2e0985802600576ef4cb22eb1329532fc4adad8d339948f8e86ff7d7e",
+    "mac": "b171451e57892ebeb5ee120e56a18b97d593e6d84dc307a7222ba272310177eb"
   },
   "status": "handoff"
 }

@@ -26,7 +26,7 @@
           "target": "handle",
           "order": 0,
           "path": "design/lantern/source/parts/handle/000-handle.py",
-          "sha256": "4877276ad5f5c4fe68000ade5c8999b0f5117e066336ca24197ac7bb90c46536"
+          "sha256": "2106f903ae5054022d5835ef1a34f858aba487d3ced43c9f318fdb629851a350"
         }
       ],
       "dependencies": []
@@ -91,10 +91,64 @@
     {
       "id": "handle",
       "target": "handle",
-      "label": "翘头横梁提手",
+      "label": "翘头顶梁",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "bbe95351bd50af5b9d5408ff4a48a4cb18a6ebfaa7843664d3f0ef8ba8ff2518",
+      "shapeHash": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "handle_left_rod",
+      "target": "handle",
+      "label": "左竖杆",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "217de6cc7544f1f8cbfb7423bebba82273fcd55019a11ee36d9b1473c9a21015",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "handle_right_rod",
+      "target": "handle",
+      "label": "右竖杆",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "a83001b1b6b2f0706217926fcc89e037a135528aa8a0907da57b8727109e4e25",
       "transform": {
         "positionMm": [
           0,
@@ -172,7 +226,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-25T14:54:24.636Z",
+  "updatedAt": "2026-09-25T15:12:10.960Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -206,7 +260,12 @@
       "handle_beam_height": 12,
       "handle_beam_depth": 14,
       "handle_beam_tip_height": 8,
-      "handle_beam_tip_bevel": 4
+      "handle_beam_tip_bevel": 4,
+      "handle_left_rod_top_tenon_size": 6.4,
+      "handle_right_rod_top_tenon_size": 6.4,
+      "handle_top_tenon_length": 8,
+      "handle_top_socket_size": 6.8,
+      "handle_top_socket_depth": 8.2
     },
     "liner": {
       "liner_floor_thickness": 6,

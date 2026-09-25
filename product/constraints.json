@@ -71,6 +71,27 @@
       "shade_bottom_z": 32,
       "shade_notch_height": 0,
       "routing_note": "内胆原走线槽保留；导线在底座盘沿Z12上方、灯罩底面Z32下方从外露灯杯处引出，不跨越磁吸面。"
+    },
+    "handle_top": {
+      "socket_centers_x": [
+        -65,
+        65
+      ],
+      "socket_center_y": 0,
+      "nominal_beam_underside_z": 192,
+      "square_socket": 6.8,
+      "square_tenon": 6.4,
+      "tenon_top_z": 200,
+      "socket_roof_z": 200.2,
+      "lateral_gap_per_side": 0.2,
+      "end_gap": 0.2,
+      "minimum_front_back_wall": 3.6,
+      "minimum_roof_thickness_bound": 3.8,
+      "tenon_exposed_length_range": [
+        7.3041,
+        7.832
+      ],
+      "note": "竖杆止挡肩贴合原顶梁下弧面；名义桩长8和孔深8.2从Z192计，实际插入长度随弧面变化。方桩需胶接防拔。"
     }
   },
   "defaults": {

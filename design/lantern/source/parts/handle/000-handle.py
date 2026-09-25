@@ -15,6 +15,11 @@ handle_beam_height = param("handle_beam_height",12.0)
 handle_beam_depth = param("handle_beam_depth",14.0)
 handle_beam_tip_height = param("handle_beam_tip_height",8.0)
 handle_beam_tip_bevel = param("handle_beam_tip_bevel",4.0)
+handle_left_rod_top_tenon_size = param("handle_left_rod_top_tenon_size",6.4)
+handle_right_rod_top_tenon_size = param("handle_right_rod_top_tenon_size",6.4)
+handle_top_tenon_length = param("handle_top_tenon_length",8.0)
+handle_top_socket_size = param("handle_top_socket_size",6.8)
+handle_top_socket_depth = param("handle_top_socket_depth",8.2)
 tip = handle_beam_width/2
 flat = handle_beam_flat_width/2
 top_tip = tip-handle_beam_tip_bevel
@@ -35,7 +40,15 @@ handle=extrude(Face(beam_outline),amount=handle_beam_depth/2,both=True,dir=(0,1,
 foot=handle_foot_spacing/2
 upper=handle_center_spacing/2
 jog_top=handle_jog_start+handle_jog_height
-for side in (-1,1):
+beam_reference=handle
+assert handle_beam_height-handle_top_socket_depth >= 2.0
+assert handle_top_socket_depth > handle_top_tenon_length
+assert handle_top_socket_size > max(handle_left_rod_top_tenon_size,handle_right_rod_top_tenon_size)
+for side,object_id,top_tenon_size,label in (
+    (-1,"handle_left_rod",handle_left_rod_top_tenon_size,"左竖杆"),
+    (1,"handle_right_rod",handle_right_rod_top_tenon_size,"右竖杆")
+):
+    assert top_tenon_size*2**0.5 < min(handle_band_width,handle_thickness)
     foot_profile=RectangleRounded(handle_band_width,handle_thickness,handle_edge_radius)
     rod_profile=Ellipse(handle_band_width/2,handle_thickness/2)
     sections=[
@@ -44,10 +57,15 @@ for side in (-1,1):
         Pos(side*upper,0,jog_top)*rod_profile,
         Pos(side*upper,0,middle_top)*rod_profile
     ]
-    handle += loft(sections,ruled=True)
-    handle += Pos(side*foot,0,-handle_tenon_length)*Box(handle_tenon_size,handle_tenon_size,handle_tenon_length+1,align=(Align.CENTER,Align.CENTER,Align.MIN))
+    rod=loft(sections,ruled=True)-beam_reference
+    rod+=Pos(side*foot,0,-handle_tenon_length)*Box(handle_tenon_size,handle_tenon_size,handle_tenon_length+1,align=(Align.CENTER,Align.CENTER,Align.MIN))
+    rod+=Pos(side*upper,0,middle_bottom-handle_edge_radius)*Box(top_tenon_size,top_tenon_size,handle_top_tenon_length+handle_edge_radius,align=(Align.CENTER,Align.CENTER,Align.MIN))
+    handle-=Pos(side*upper,0,middle_bottom)*Box(handle_top_socket_size,handle_top_socket_size,handle_top_socket_depth,align=(Align.CENTER,Align.CENTER,Align.MIN))
+    assert len(rod.solids())==1 and rod.is_valid
+    rod.color=Color(0.63,0.36,0.16)
+    publish(object_id,rod,label,material="petg")
 assert handle_beam_width > handle_center_spacing+handle_band_width
 assert middle_bottom > jog_top
 assert len(handle.solids()) == 1 and handle.is_valid
 handle.color=Color(0.63,0.36,0.16)
-publish("handle",handle,"翘头横梁提手",material="petg")
+publish("handle",handle,"翘头顶梁",material="petg")

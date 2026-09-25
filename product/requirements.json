@@ -114,7 +114,7 @@
       "source": "default"
     },
     "delivery": {
-      "value": "four independent solids in exported STEP assembly",
+      "value": "six independent solids in exported STEP assembly; four functional groups, with handle split into beam and two rods",
       "source": "default"
     },
     "shade_style": {
@@ -159,6 +159,20 @@
     },
     "square_joint_center_spacing_mm": {
       "value": 100.8,
+      "source": "default"
+    },
+    "handle_top_attachment": {
+      "value": "separate top beam and two upright rods joined by square tenons",
+      "source": "user"
+    },
+    "handle_top_square_joint_mm": {
+      "value": {
+        "tenon": 6.4,
+        "socket": 6.8,
+        "tenon_projection_from_beam_midplane": 8,
+        "socket_depth_from_beam_midplane": 8.2,
+        "center_spacing": 130
+      },
       "source": "default"
     }
   },

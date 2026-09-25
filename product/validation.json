@@ -1,10 +1,10 @@
 {
-  "cad_revision": "d2bfb90e5b28c8481add3ba5f8b8229d4fcc4be1bdb3adea49ed7d9a2c1ab808",
-  "export_id": "export-d25538682db288e6fadbf6e2b36a3668",
+  "cad_revision": "97fe6e8a56aafad8bd66aa3f929b6ab3df5001d57141b2f5393390cc8f12203c",
+  "export_id": "export-5e409efdec3e241620127d87db124554",
   "export_status": "handoff",
   "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt.",
   "measured_results": {
-    "valid_solids": 4,
+    "valid_solids": 6,
     "assembly_envelope_mm": [
       180,
       114,
@@ -17,11 +17,16 @@
     ],
     "interfering_pairs": 0,
     "undetermined_pairs": 0,
-    "handle_shade_minimum_gap_mm": 4.9405,
     "liner_top_z_mm": 106,
     "shade_top_z_mm": 108,
     "liner_recess_below_rim_mm": 2,
-    "handle_liner_minimum_gap_mm": 1.4
+    "each_rod_shade_minimum_gap_mm": 4.9405,
+    "each_rod_liner_minimum_gap_mm": 1.4,
+    "beam_shade_minimum_gap_mm": 84,
+    "upper_tenon_exposed_length_range_mm": [
+      7.304117,
+      7.832018
+    ]
   },
   "source_parameter_checks": {
     "shade_magnet_positions_mm": [
@@ -113,43 +118,64 @@
     "square_joint_side_gap_mm": 0.2,
     "square_socket_inner_wall_mm": 1.5,
     "square_socket_outer_corner_wall_mm": 2.5601249082990662,
-    "square_socket_outer_top_land_mm": 1.5601249082990662
+    "square_socket_outer_top_land_mm": 1.5601249082990662,
+    "handle_top_joint": {
+      "tenon_mm": 6.4,
+      "socket_mm": 6.8,
+      "center_x_mm": [
+        -65,
+        65
+      ],
+      "center_y_mm": 0,
+      "nominal_underside_z_mm": 192,
+      "tenon_top_z_mm": 200,
+      "socket_roof_z_mm": 200.2,
+      "lateral_gap_per_side_mm": 0.2,
+      "end_gap_mm": 0.2,
+      "socket_front_back_wall_mm": 3.6,
+      "roof_thickness_lower_bound_mm": 3.8,
+      "seat": "Rod shoulders follow original curved beam underside; 8 mm nominal peg projection is measured from Z192, not a uniform shoulder."
+    }
   },
   "unchanged_object_evidence": {
-    "previous_revision": "0913922a98dd79d70b564412bcb3e241b1ea6d31906b8734eacd3fdfbef62771",
+    "previous_revision": "d2bfb90e5b28c8481add3ba5f8b8229d4fcc4be1bdb3adea49ed7d9a2c1ab808",
     "objects": [
+      "base",
       "liner",
       "shade"
     ],
     "shape_hashes": {
+      "base": "5269990fb65970016940ec8b0116d2fbc9a50372d8923da9baf443d3e33cc7d5",
       "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
       "shade": "eb0746f892971986fa139ebc7c7ea9e9c57b585bb0038afcd75352860a5934ed"
     },
-    "note": "Liner and shade shape hashes and placements are unchanged. Base sockets and handle foot spacing/tenon size changed through four scalar parameters."
+    "note": "Base, liner and shade source and shape hashes match preceding handoff. Their placements remain unchanged; lower rod joints retain 7.4 mm tenons and X±50.4 mm centers."
   },
   "visual_review": {
     "views": [
       "assembled iso",
-      "base isolated top",
-      "base handle liner isolated iso"
+      "beam isolated bottom",
+      "beam isolated iso_back",
+      "right rod isolated top",
+      "right rod isolated iso"
     ],
-    "finding": "Both square sockets remain enclosed within the rim with more material at the outside edge; handle feet stay aligned and seated. Lantern outline and the two-pair magnetic interfaces are retained."
+    "finding": "Two enclosed square blind sockets are visible underneath the separated beam; rod upper square tenon sits inside the round shoulder. Assembled outline retained, both shoulders contact the beam; all six solids are separate without shared volume."
   },
   "wire_route": {
     "description": "Original liner recess retained. Cable exits exposed lamp cup above base rim Z12 and below shade bottom Z32; keep wire out of magnetic mating plane.",
     "actual_cable_trial": false
   },
   "export_checks": {
-    "step_sha256": "aacce23fe8584940deabc00d1a500ae53bc7a3627244078b413123a27ed2c457",
-    "bytes": 5809679,
+    "step_sha256": "11153377781ebb48738338704af29e5395083332b55ba6e89271421101ec5696",
+    "bytes": 5922308,
     "preview_refreshed": true,
     "interference": {
-      "summary": "No interference across 6 object pairs.",
+      "summary": "No interference across 15 object pairs.",
       "counts": {
-        "objects": 4,
-        "pairs": 6,
+        "objects": 6,
+        "pairs": 15,
         "exact": 0,
-        "cached": 5,
+        "cached": 8,
         "interference": 0,
         "undeclared": 0,
         "over_budget": 0,
@@ -162,7 +188,8 @@
     "No physical printing, cable fit or load test performed.",
     "Straight-section wall range is nominal radial thickness; rounded shoulders and magnet ring are thicker, not constant normal thickness.",
     "Two opposed magnet pairs permit a 180-degree orientation ambiguity; magnet polarity and holding force require assembly testing.",
-    "Original lamp voltage, power and connector are unspecified; retain original cable and matched supply."
+    "Original lamp voltage, power and connector are unspecified; retain original cable and matched supply.",
+    "Upper and lower straight tenon joints need adhesive retention and cured-joint load testing; the clearances do not provide a mechanical pull-out lock."
   ],
   "user_requirement_checks": {
     "liner_not_above_shade": {
@@ -204,6 +231,13 @@
       "previous_outer_top_land_mm": 0.8012228396316772,
       "current_outer_top_land_mm": 1.5601249082990662,
       "evidence": "Current-build parameter inspection, circular-rim/square-corner calculation, isolated base top view and assembly collision/clearance check. Remaining inner wall 1.5 mm; outer top land 1.5601 mm; paired centers X±50.4 mm."
+    },
+    "beam_rod_square_tenons": {
+      "status": "passed",
+      "beam_solids": 1,
+      "rod_solids": 2,
+      "evidence": "Exact-revision isolated bottom/top/isometric views, source-defined aligned square tenons/sockets and zero solid interference across all 15 pairs. Curved shoulder contact is intentional, not shared volume.",
+      "physical_fit_tested": false
     }
   }
 }

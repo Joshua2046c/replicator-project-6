@@ -1,5 +1,7 @@
 id,name,quantity,source,notes
-handle,双立杆翘头横梁提手 PETG 暖木色,1,default,一体打印件 非实木 方桩7.4mm 中心距100.8mm
+handle,双盲孔翘头顶梁 PETG 暖木色,1,default,非实木 顶部方孔6.8mm 中心距130mm
+handle_left_rod,左竖杆 PETG 暖木色,1,default,上桩6.4mm 下桩7.4mm 上下均胶接
+handle_right_rod,右竖杆 PETG 暖木色,1,default,上桩6.4mm 下桩7.4mm 上下均胶接
 base,带双方孔浅圆托盘 PETG 青色,1,default,打印件 方孔7.8mm 中心距100.8mm
 liner,低于灯罩口沿的圆饼灯镂空直筒内胆 PETG 米黄色,1,default,打印件
 shade,凹槽延伸至收口的圆弧直筒灯罩 半透明PETG 绿色,1,default,无底部走线槽 两处磁铁孔

@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "printable_part",
-  "summary": "四件式中式磁吸提灯，含提手、底座、内胆和薄壁灯罩。",
+  "summary": "四个功能部件的中式磁吸提灯；提手分为顶梁、左竖杆、右竖杆，连同底座、内胆、灯罩共六个打印实体。",
   "required_interfaces": [
     {
       "id": "light_fit",
@@ -36,6 +36,13 @@
       "id": "recessed_liner_rim",
       "kind": "clearance",
       "description": "灯罩上口略微内收，内胆最高点不得高于灯罩口沿",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "beam_rod_square_tenons",
+      "kind": "mechanical_mating",
+      "description": "顶梁与两根竖杆分件，以竖杆顶端方桩配合顶梁底部盲孔",
       "source": "user_requested",
       "required": true
     }
@@ -94,10 +101,16 @@
       "source": "user_requested",
       "description": "两侧方孔太贴近底座外边缘，调整位置并略微缩小插桩",
       "path": "product/references/uploads/20260925T145245411Z-1-mark.png"
+    },
+    {
+      "id": "beam_joint_reference",
+      "source": "user_requested",
+      "description": "顶梁与两根竖杆也通过方形插桩连接",
+      "path": "product/references/uploads/20260925T150652787Z-1-mark.png"
     }
   ],
   "assembly_story": {
-    "installation": "胶接方桩提手；配对粘入磁铁；放入原装灯和线；内胆磁吸到底座；灯罩磁吸到内胆。",
+    "installation": "干试两根竖杆的上下方桩，先胶接顶梁和竖杆，再与底座胶接；配对粘入磁铁；放入原装灯和线；内胆磁吸到底座；灯罩磁吸到内胆。所有承力胶接完全固化后才可悬提。",
     "maintenance": "上提灯罩即可检查灯和线，再提内胆使底座分离。",
     "user_access": [
       "顶部灯组取放孔",
@@ -111,7 +124,7 @@
       {
         "role": "lantern",
         "design_id": "lantern",
-        "description": "Four-part Chinese lantern",
+        "description": "Six-solid Chinese lantern with a three-piece square-tenon handle",
         "delivery_target": "printable_part",
         "required_formats": [
           "step"
@@ -121,7 +134,8 @@
           "magnet_joints",
           "square_tenons",
           "wire_exit",
-          "recessed_liner_rim"
+          "recessed_liner_rim",
+          "beam_rod_square_tenons"
         ],
         "reference_ids": [
           "lantern_reference",
@@ -132,7 +146,8 @@
           "rim_revision_reference",
           "rim_fluting_reference",
           "base_magnets_reference",
-          "square_joint_reference"
+          "square_joint_reference",
+          "beam_joint_reference"
         ]
       }
     ]

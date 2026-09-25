@@ -2,18 +2,48 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "587ab18d3313ff3a1c5062d28471644c349ed8f4984a3ee40477431e57173dc5",
+  "requirements_digest": "c3ee0b76c96831ff4adbbb6f7b26853a9f1520847866cb6307b966ad03ed8204",
   "items": [
     {
       "id": "handle",
       "role": "printed_part",
-      "name": "双立杆翘头横梁提手，PETG，暖木色",
+      "name": "双盲孔翘头顶梁，PETG，暖木色",
       "quantity": 1,
       "source": "default",
       "assembly_interface": {
-        "tenon_mm": 7.4,
-        "center_spacing_mm": 100.8,
-        "engagement_mm": 8
+        "square_socket_mm": 6.8,
+        "center_spacing_mm": 130,
+        "socket_depth_from_midplane_mm": 8.2
+      }
+    },
+    {
+      "id": "handle_left_rod",
+      "role": "printed_part",
+      "name": "左竖杆（上下方桩），PETG，暖木色",
+      "quantity": 1,
+      "source": "default",
+      "assembly_interface": {
+        "bottom_tenon_mm": 7.4,
+        "bottom_center_x_mm": -50.4,
+        "bottom_engagement_mm": 8,
+        "top_tenon_mm": 6.4,
+        "top_center_x_mm": -65,
+        "top_tenon_projection_from_midplane_mm": 8
+      }
+    },
+    {
+      "id": "handle_right_rod",
+      "role": "printed_part",
+      "name": "右竖杆（上下方桩），PETG，暖木色",
+      "quantity": 1,
+      "source": "default",
+      "assembly_interface": {
+        "bottom_tenon_mm": 7.4,
+        "bottom_center_x_mm": 50.4,
+        "bottom_engagement_mm": 8,
+        "top_tenon_mm": 6.4,
+        "top_center_x_mm": 65,
+        "top_tenon_projection_from_midplane_mm": 8
       }
     },
     {
