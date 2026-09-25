@@ -124,6 +124,22 @@
     "shade_magnet_locations": {
       "value": 2,
       "source": "user"
+    },
+    "shade_top_shape": {
+      "value": "slightly inward-contracted upper opening",
+      "source": "user"
+    },
+    "liner_top_relation": {
+      "value": "liner must not extend above shade",
+      "source": "user"
+    },
+    "shade_top_radial_inset_mm": {
+      "value": 4,
+      "source": "default"
+    },
+    "liner_recess_below_rim_mm": {
+      "value": 2,
+      "source": "default"
     }
   },
   "open_questions": []

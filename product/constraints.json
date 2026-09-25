@@ -31,7 +31,12 @@
         180
       ],
       "sleeve_inner_diameter": 69.2,
-      "liner_outer_diameter": 68.4
+      "liner_outer_diameter": 68.4,
+      "top_rim_z": 108,
+      "liner_top_z": 106,
+      "liner_total_height": 102,
+      "shade_top_outer_diameter": 86,
+      "shade_top_opening_diameter": 82.4
     },
     "magnet_pockets": {
       "diameter": 7.2,

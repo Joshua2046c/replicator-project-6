@@ -31,6 +31,13 @@
       "description": "保留内胆开放走线缺口，从外露灯杯引出；灯罩底部不开槽",
       "source": "user_requested",
       "required": true
+    },
+    {
+      "id": "recessed_liner_rim",
+      "kind": "clearance",
+      "description": "灯罩上口略微内收，内胆最高点不得高于灯罩口沿",
+      "source": "user_requested",
+      "required": true
     }
   ],
   "external_references": [
@@ -63,6 +70,12 @@
       "source": "user_requested",
       "description": "圆饼灯尺寸 Ø60 mm、厚 8 mm",
       "path": "product/references/uploads/20260924T224920191Z-2-image.png"
+    },
+    {
+      "id": "rim_revision_reference",
+      "source": "user_requested",
+      "description": "灯罩向内略微收口，内胆不高过灯罩",
+      "path": "product/references/uploads/20260925T142804664Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -89,14 +102,16 @@
           "light_fit",
           "magnet_joints",
           "square_tenons",
-          "wire_exit"
+          "wire_exit",
+          "recessed_liner_rim"
         ],
         "reference_ids": [
           "lantern_reference",
           "light_reference",
           "lantern_reference_side",
           "handle_reference",
-          "shade_revision_reference"
+          "shade_revision_reference",
+          "rim_revision_reference"
         ]
       }
     ]

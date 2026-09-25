@@ -1,5 +1,6 @@
 from math import cos, sin, radians, pi, sqrt
 shade_height = param("shade_height",76.0)
+shade_top_inset = param("shade_top_inset",4.0)
 shade_belly_diameter = param("shade_belly_diameter",106.0)
 shade_wall_thickness = param("shade_wall_thickness",1.8)
 shade_ring_outer_diameter = param("shade_ring_outer_diameter",94.0)
@@ -18,17 +19,22 @@ outer_round=outer_radius-end_radius
 inner_radius=shade_belly_diameter/2-shade_wall_thickness
 inner_end=end_radius-shade_wall_thickness
 inner_round=inner_radius-inner_end
+top_end_radius=end_radius-shade_top_inset
+top_outer_round=outer_radius-top_end_radius
+top_inner_end=top_end_radius-shade_wall_thickness
+top_inner_round=inner_radius-top_inner_end
 assert outer_round>0 and inner_round>0
-assert shade_height>2*outer_round+shade_ring_height
+assert shade_top_inset>=0 and top_inner_end>shade_ring_inner_diameter/2
+assert shade_height>outer_round+top_outer_round+shade_ring_height
 assert shade_ring_height>shade_magnet_pocket_depth
 assert shade_magnet_radius-shade_magnet_pocket_diameter/2>shade_ring_inner_diameter/2
 edges=[
  Edge.make_three_point_arc((end_radius,0,0),(end_radius+outer_round/sqrt(2),0,outer_round-outer_round/sqrt(2)),(outer_radius,0,outer_round)),
- Edge.make_line((outer_radius,0,outer_round),(outer_radius,0,shade_height-outer_round)),
- Edge.make_three_point_arc((outer_radius,0,shade_height-outer_round),(end_radius+outer_round/sqrt(2),0,shade_height-outer_round+outer_round/sqrt(2)),(end_radius,0,shade_height)),
- Edge.make_line((end_radius,0,shade_height),(inner_end,0,shade_height)),
- Edge.make_three_point_arc((inner_end,0,shade_height),(inner_end+inner_round/sqrt(2),0,shade_height-inner_round+inner_round/sqrt(2)),(inner_radius,0,shade_height-inner_round)),
- Edge.make_line((inner_radius,0,shade_height-inner_round),(inner_radius,0,shade_ring_height+inner_round)),
+ Edge.make_line((outer_radius,0,outer_round),(outer_radius,0,shade_height-top_outer_round)),
+ Edge.make_three_point_arc((outer_radius,0,shade_height-top_outer_round),(top_end_radius+top_outer_round/sqrt(2),0,shade_height-top_outer_round+top_outer_round/sqrt(2)),(top_end_radius,0,shade_height)),
+ Edge.make_line((top_end_radius,0,shade_height),(top_inner_end,0,shade_height)),
+ Edge.make_three_point_arc((top_inner_end,0,shade_height),(top_inner_end+top_inner_round/sqrt(2),0,shade_height-top_inner_round+top_inner_round/sqrt(2)),(inner_radius,0,shade_height-top_inner_round)),
+ Edge.make_line((inner_radius,0,shade_height-top_inner_round),(inner_radius,0,shade_ring_height+inner_round)),
  Edge.make_three_point_arc((inner_radius,0,shade_ring_height+inner_round),(inner_end+inner_round/sqrt(2),0,shade_ring_height+inner_round-inner_round/sqrt(2)),(inner_end,0,shade_ring_height)),
  Edge.make_line((inner_end,0,shade_ring_height),(shade_ring_inner_diameter/2,0,shade_ring_height)),
  Edge.make_line((shade_ring_inner_diameter/2,0,shade_ring_height),(shade_ring_inner_diameter/2,0,0)),

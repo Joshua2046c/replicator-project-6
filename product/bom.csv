@@ -1,8 +1,8 @@
 id,name,quantity,source,notes
 handle,双立杆翘头横梁提手 PETG 暖木色,1,default,一体打印件 非实木
 base,带双方孔浅圆托盘 PETG 青色,1,default,打印件
-liner,圆饼灯镂空直筒内胆 PETG 米黄色,1,default,打印件
-shade,圆弧直筒波纹灯罩 半透明PETG 绿色,1,default,无底部走线槽 两处磁铁孔
+liner,低于灯罩口沿的圆饼灯镂空直筒内胆 PETG 米黄色,1,default,打印件
+shade,上口内收圆弧直筒波纹灯罩 半透明PETG 绿色,1,default,无底部走线槽 两处磁铁孔
 magnet_7x2,轴向充磁圆片磁铁 Ø7×2 mm,10,user_dimensions,灯罩两对 底座三对
 light_60x8,用户图示 Ø60×8 mm 圆饼灯组 含原装线及匹配电源,1,user,保留原装电气系统
 adhesive,适用于 PETG 与镀镍磁铁的双组分环氧胶,1,default,装配耗材

@@ -54,7 +54,7 @@
           "target": "shade",
           "order": 0,
           "path": "design/lantern/source/parts/shade/000-shade.py",
-          "sha256": "47232367ccf75883eef516459f7dff25337181792e28125aaba75ab5cc2de296"
+          "sha256": "f1f281e9772c3595dea8dd6f0c1de25e27beea7f5fca3fe09b65535ac61e2a6f"
         }
       ],
       "dependencies": []
@@ -121,7 +121,7 @@
       "label": "直筒镂空内胆",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "1a4208e9567e44fa8423713c33cd066f282d01e371a7d2b35ced34a0fd08ce94",
+      "shapeHash": "49679052ff0198a1c71e4fddbf055dceddfc9dda2cfcabb88d799c8b6b91c7eb",
       "transform": {
         "positionMm": [
           0,
@@ -148,7 +148,7 @@
       "label": "圆弧直筒波纹灯罩",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "e4631d044f703f06692be69e5756ff017cbe25ddb426ee8a91056ccff64762fd",
+      "shapeHash": "123c96feb37b4782d9259da4c44831e267c9775bea90998a2a50f34212cad12c",
       "transform": {
         "positionMm": [
           0,
@@ -172,7 +172,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-25T08:21:37.199Z",
+  "updatedAt": "2026-09-25T14:30:14.300Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -217,7 +217,7 @@
       "liner_upper_magnet_radius": 39.2,
       "liner_wire_width": 8,
       "liner_wire_angle": -90,
-      "liner_height": 108,
+      "liner_height": 102,
       "liner_top_outer_diameter": 68.4,
       "liner_top_inner_diameter": 63,
       "liner_top_thickness": 5,
@@ -240,7 +240,8 @@
       "shade_magnet_pocket_depth": 2.15,
       "shade_magnet_radius": 39.2,
       "shade_magnet_count": 2,
-      "shade_magnet_angle": 0
+      "shade_magnet_angle": 0,
+      "shade_top_inset": 4
     }
   }
 }

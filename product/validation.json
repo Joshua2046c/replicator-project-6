@@ -1,6 +1,6 @@
 {
-  "cad_revision": "3e1b6bc6aeb6b7791e1985740e3c7aead5fc81df3f97daa740cf6bebe5cf0e0b",
-  "export_id": "export-cfa25840fb57574f5817fed4d6e9c91b",
+  "cad_revision": "3c1645a09931b8fce9825abcdd268037de3a6b339c33359ad1a9d21de5982619",
+  "export_id": "export-1f946bfa0f676dc35340e0c9af8a10ac",
   "export_status": "handoff",
   "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt.",
   "measured_results": {
@@ -17,7 +17,10 @@
     ],
     "interfering_pairs": 0,
     "undetermined_pairs": 0,
-    "handle_shade_minimum_gap_mm": 5.0292
+    "handle_shade_minimum_gap_mm": 5.0292,
+    "liner_top_z_mm": 106,
+    "shade_top_z_mm": 108,
+    "liner_recess_below_rim_mm": 2
   },
   "source_parameter_checks": {
     "shade_magnet_positions_mm": [
@@ -57,8 +60,7 @@
       1.8,
       3.6
     ],
-    "shade_end_round_radius_mm": 7.8,
-    "shade_top_opening_mm": 90.4,
+    "shade_top_opening_mm": 82.4,
     "shade_lower_opening_mm": 69.2,
     "liner_outer_diameter_mm": 68.4,
     "light_pocket_diameter_mm": 60.6,
@@ -66,10 +68,14 @@
       60,
       8
     ],
-    "requirements_digest_matches_bom": true
+    "requirements_digest_matches_bom": true,
+    "shade_bottom_round_radius_mm": 7.8,
+    "shade_top_round_radius_mm": 11.8,
+    "shade_top_outer_diameter_mm": 86,
+    "liner_height_mm": 102
   },
   "unchanged_object_evidence": {
-    "previous_revision": "e9ac5896ff7cf52826ff079996f1a8761752e2204c885f534ee147ddbfd1df2a",
+    "previous_revision": "3e1b6bc6aeb6b7791e1985740e3c7aead5fc81df3f97daa740cf6bebe5cf0e0b",
     "objects": [
       "base",
       "handle"
@@ -78,24 +84,23 @@
       "base": "ad6e533fb744ace47ad1b0d20d31817711a7428f41d30b091a7c6cf12391f479",
       "handle": "3f2863bd1548407dae3b1f3a376ca15f5b3c311cc683ff3fd3be16a82309dcc3"
     },
-    "note": "Shape hashes and placements match the design opened at query start; previous unexported handle revision is included in this successful handoff."
+    "note": "Base and handle object records and placements exactly match the previously exported design."
   },
   "visual_review": {
     "views": [
       "assembled iso",
-      "isolated shade iso",
-      "shade bottom",
-      "liner top"
+      "shade and liner isolated front",
+      "shade and liner isolated iso"
     ],
-    "finding": "Straight cylindrical silhouette with rounded upper/lower transitions and 40 visible longitudinal waves. No waist or shade wire notch. Shade bottom and liner top each show two opposite pockets; base and handle retain their existing shapes."
+    "finding": "Upper opening contracts inward with a rounded shoulder; liner top is recessed beneath shade rim and does not project in front view. Forty longitudinal waves, lower profile, two paired upper magnet locations and original cable route retained."
   },
   "wire_route": {
     "description": "Original liner recess retained. Cable exits exposed lamp cup above base rim Z12 and below shade bottom Z32; keep wire out of magnetic mating plane.",
     "actual_cable_trial": false
   },
   "export_checks": {
-    "step_sha256": "7911c8c08f79e8a5e9abc1756dd6ffaa39a1e3780ef73acde4d0149658a3bd8c",
-    "bytes": 5158910,
+    "step_sha256": "1b07a90ab93bac271cac1f5a604457c07933416dddc4eb1ca90046c27418935d",
+    "bytes": 4921262,
     "preview_refreshed": true,
     "interference": {
       "summary": "No interference across 6 object pairs.",
@@ -117,5 +122,21 @@
     "Straight-section wall range is nominal radial thickness; rounded shoulders and magnet ring are thicker, not constant normal thickness.",
     "Two opposed magnet pairs permit a 180-degree orientation ambiguity; magnet polarity and holding force require assembly testing.",
     "Original lamp voltage, power and connector are unspecified; retain original cable and matched supply."
-  ]
+  ],
+  "user_requirement_checks": {
+    "liner_not_above_shade": {
+      "operator": "lte",
+      "actual_liner_top_z_mm": 106,
+      "maximum_shade_top_z_mm": 108,
+      "status": "passed",
+      "evidence": "Exact committed-build bounding boxes and front view."
+    },
+    "slightly_contracted_upper_opening": {
+      "status": "passed",
+      "radial_contraction_from_previous_mm": 4,
+      "previous_opening_diameter_mm": 90.4,
+      "current_opening_diameter_mm": 82.4,
+      "evidence": "Source profile parameters and final isometric view."
+    }
+  }
 }
