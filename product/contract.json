@@ -45,6 +45,13 @@
       "description": "顶梁与两根竖杆分件，以竖杆顶端方桩配合顶梁底部盲孔",
       "source": "user_requested",
       "required": true
+    },
+    {
+      "id": "shade_shoulder_wall",
+      "kind": "internal_fit",
+      "description": "标注的灯罩收口肩部最薄处增厚至1.5mm，保留外部纵向凹槽及现有装配接口",
+      "source": "user_requested",
+      "required": true
     }
   ],
   "external_references": [
@@ -107,6 +114,12 @@
       "source": "user_requested",
       "description": "顶梁与两根竖杆也通过方形插桩连接",
       "path": "product/references/uploads/20260925T150652787Z-1-mark.png"
+    },
+    {
+      "id": "shade_wall_reference",
+      "source": "user_requested",
+      "description": "灯罩收口区域太薄，增加到1.5mm",
+      "path": "product/references/uploads/20260926T012447020Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -135,7 +148,8 @@
           "square_tenons",
           "wire_exit",
           "recessed_liner_rim",
-          "beam_rod_square_tenons"
+          "beam_rod_square_tenons",
+          "shade_shoulder_wall"
         ],
         "reference_ids": [
           "lantern_reference",
@@ -147,7 +161,8 @@
           "rim_fluting_reference",
           "base_magnets_reference",
           "square_joint_reference",
-          "beam_joint_reference"
+          "beam_joint_reference",
+          "shade_wall_reference"
         ]
       }
     ]

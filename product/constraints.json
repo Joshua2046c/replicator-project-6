@@ -36,7 +36,10 @@
       "liner_total_height": 102,
       "shade_top_outer_diameter": 87.2,
       "shade_top_opening_diameter": 82.4,
-      "shade_top_outer_valley_diameter": 86
+      "shade_top_outer_valley_diameter": 86,
+      "shade_shoulder_minimum_wall": 1.5,
+      "inner_shoulder_drop": 1.3582569085225398,
+      "thickening_note": "内侧圆弧下移，最薄处目标1.5mm；外形、顶部82.4mm开口、底部磁吸接口与直段径向壁厚不变。"
     },
     "magnet_pockets": {
       "diameter": 7.2,

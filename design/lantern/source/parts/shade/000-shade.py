@@ -14,6 +14,7 @@ shade_magnet_radius = param("shade_magnet_radius",39.2)
 shade_magnet_count = param("shade_magnet_count",2)
 shade_magnet_angle = param("shade_magnet_angle",0.0)
 shade_rim_wave_depth = param("shade_rim_wave_depth",0.6)
+shade_shoulder_min_wall = param("shade_shoulder_min_wall",1.5)
 outer_radius=shade_belly_diameter/2+shade_rib_radius
 end_radius=shade_ring_outer_diameter/2
 outer_round=outer_radius-end_radius
@@ -24,6 +25,9 @@ top_end_radius=end_radius-shade_top_inset
 top_outer_round=outer_radius-top_end_radius
 top_inner_end=top_end_radius-shade_wall_thickness
 top_inner_round=inner_radius-top_inner_end
+assert 0 < shade_shoulder_min_wall <= shade_wall_thickness
+top_inner_center_z=shade_height-sqrt((top_inner_round+shade_shoulder_min_wall)**2-shade_wall_thickness**2)
+top_inner_end_z=top_inner_center_z+top_inner_round
 assert outer_round>0 and inner_round>0
 assert shade_top_inset>=0 and top_inner_end>shade_ring_inner_diameter/2
 assert shade_height>outer_round+top_outer_round+shade_ring_height
@@ -66,13 +70,19 @@ cavity_edges=[
  Edge.make_line((shade_ring_inner_diameter/2,0,0),(shade_ring_inner_diameter/2,0,shade_ring_height)),
  Edge.make_line((shade_ring_inner_diameter/2,0,shade_ring_height),(inner_end,0,shade_ring_height)),
  Edge.make_three_point_arc((inner_end,0,shade_ring_height),(inner_end+inner_round/sqrt(2),0,shade_ring_height+inner_round-inner_round/sqrt(2)),(inner_radius,0,shade_ring_height+inner_round)),
- Edge.make_line((inner_radius,0,shade_ring_height+inner_round),(inner_radius,0,shade_height-top_inner_round)),
- Edge.make_three_point_arc((inner_radius,0,shade_height-top_inner_round),(top_inner_end+top_inner_round/sqrt(2),0,shade_height-top_inner_round+top_inner_round/sqrt(2)),(top_inner_end,0,shade_height)),
- Edge.make_line((top_inner_end,0,shade_height),(top_inner_end,0,shade_height+shade_wall_thickness)),
+ Edge.make_line((inner_radius,0,shade_ring_height+inner_round),(inner_radius,0,top_inner_center_z)),
+ Edge.make_three_point_arc((inner_radius,0,top_inner_center_z),(top_inner_end+top_inner_round/sqrt(2),0,top_inner_center_z+top_inner_round/sqrt(2)),(top_inner_end,0,top_inner_end_z)),
+ Edge.make_line((top_inner_end,0,top_inner_end_z),(top_inner_end,0,shade_height+shade_wall_thickness)),
  Edge.make_line((top_inner_end,0,shade_height+shade_wall_thickness),(0,0,shade_height+shade_wall_thickness)),
  Edge.make_line((0,0,shade_height+shade_wall_thickness),(0,0,0))
 ]
-shade=outer_solid-revolve(Face(Wire(cavity_edges)),axis=Axis.Z)
+cavity=revolve(Face(Wire(cavity_edges)),axis=Axis.Z)
+inner_shoulder_face=cavity.faces().filter_by(GeomType.TORUS).sort_by(Axis.Z)[-1]
+shoulder_distances=[face.distance_to(inner_shoulder_face) for face in upper_solid.faces() if face.geom_type != GeomType.PLANE]
+measured_shoulder_wall=min(shoulder_distances)
+print("upper_shoulder_minimum_surface_distance_mm",measured_shoulder_wall)
+assert measured_shoulder_wall >= shade_shoulder_min_wall-0.005
+shade=outer_solid-cavity
 print("rim_wave_depth_mm",shade_rim_wave_depth,"rim_radial_wall_min_mm",top_end_radius-top_inner_end)
 for index in range(int(shade_magnet_count)):
     angle=shade_magnet_angle+index*360/int(shade_magnet_count)

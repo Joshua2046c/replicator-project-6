@@ -1,8 +1,8 @@
 {
-  "cad_revision": "97fe6e8a56aafad8bd66aa3f929b6ab3df5001d57141b2f5393390cc8f12203c",
-  "export_id": "export-5e409efdec3e241620127d87db124554",
+  "cad_revision": "c27b83fe7a3e8f2aff521f3210bdfd5be8645d6040ec6250ccb4e0373749cb3c",
+  "export_id": "export-adc14b776e73cbd46921d9f4510b1739",
   "export_status": "handoff",
-  "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt.",
+  "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt. Upper shoulder face-to-face distance checked against 1.5 mm user target, supported by all-flute in-cell surface-distance assertion.",
   "measured_results": {
     "valid_solids": 6,
     "assembly_envelope_mm": [
@@ -26,7 +26,8 @@
     "upper_tenon_exposed_length_range_mm": [
       7.304117,
       7.832018
-    ]
+    ],
+    "shade_upper_shoulder_minimum_wall_mm": 1.5000000000004168
   },
   "source_parameter_checks": {
     "shade_magnet_positions_mm": [
@@ -135,39 +136,43 @@
       "socket_front_back_wall_mm": 3.6,
       "roof_thickness_lower_bound_mm": 3.8,
       "seat": "Rod shoulders follow original curved beam underside; 8 mm nominal peg projection is measured from Z192, not a uniform shoulder."
-    }
+    },
+    "shade_shoulder_min_wall_mm": 1.5,
+    "shade_inner_shoulder_drop_mm": 1.3582569085225398
   },
   "unchanged_object_evidence": {
-    "previous_revision": "d2bfb90e5b28c8481add3ba5f8b8229d4fcc4be1bdb3adea49ed7d9a2c1ab808",
+    "previous_revision": "97fe6e8a56aafad8bd66aa3f929b6ab3df5001d57141b2f5393390cc8f12203c",
     "objects": [
       "base",
-      "liner",
-      "shade"
+      "handle",
+      "handle_left_rod",
+      "handle_right_rod",
+      "liner"
     ],
     "shape_hashes": {
       "base": "5269990fb65970016940ec8b0116d2fbc9a50372d8923da9baf443d3e33cc7d5",
-      "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
-      "shade": "eb0746f892971986fa139ebc7c7ea9e9c57b585bb0038afcd75352860a5934ed"
+      "handle": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
+      "handle_left_rod": "217de6cc7544f1f8cbfb7423bebba82273fcd55019a11ee36d9b1473c9a21015",
+      "handle_right_rod": "a83001b1b6b2f0706217926fcc89e037a135528aa8a0907da57b8727109e4e25",
+      "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a"
     },
-    "note": "Base, liner and shade source and shape hashes match preceding handoff. Their placements remain unchanged; lower rod joints retain 7.4 mm tenons and X±50.4 mm centers."
+    "note": "Only shade inner upper shoulder geometry changed; all other solid hashes and placements unchanged. Shade outer construction, openings, bottom ring and magnet definitions retained."
   },
   "visual_review": {
     "views": [
       "assembled iso",
-      "beam isolated bottom",
-      "beam isolated iso_back",
-      "right rod isolated top",
-      "right rod isolated iso"
+      "shade isolated iso",
+      "shade isolated top"
     ],
-    "finding": "Two enclosed square blind sockets are visible underneath the separated beam; rod upper square tenon sits inside the round shoulder. Assembled outline retained, both shoulders contact the beam; all six solids are separate without shared volume."
+    "finding": "Inward shoulder and continuous longitudinal flutes retained. Inner shoulder sits lower with a short vertical inner lip; no additional external band, all magnetic interfaces unchanged."
   },
   "wire_route": {
     "description": "Original liner recess retained. Cable exits exposed lamp cup above base rim Z12 and below shade bottom Z32; keep wire out of magnetic mating plane.",
     "actual_cable_trial": false
   },
   "export_checks": {
-    "step_sha256": "11153377781ebb48738338704af29e5395083332b55ba6e89271421101ec5696",
-    "bytes": 5922308,
+    "step_sha256": "0df4cb88d5aa66f10c7ff251a1ecd0a1b37e7a70179d75f44fa018699dfc08ed",
+    "bytes": 5942318,
     "preview_refreshed": true,
     "interference": {
       "summary": "No interference across 15 object pairs.",
@@ -186,7 +191,7 @@
   },
   "limits": [
     "No physical printing, cable fit or load test performed.",
-    "Straight-section wall range is nominal radial thickness; rounded shoulders and magnet ring are thicker, not constant normal thickness.",
+    "Straight-section wall range is nominal radial thickness. Upper shoulder minimum surface separation is 1.5 mm, not a constant-thickness shell; bottom magnet ring remains thicker.",
     "Two opposed magnet pairs permit a 180-degree orientation ambiguity; magnet polarity and holding force require assembly testing.",
     "Original lamp voltage, power and connector are unspecified; retain original cable and matched supply.",
     "Upper and lower straight tenon joints need adhesive retention and cured-joint load testing; the clearances do not provide a mechanical pull-out lock."
@@ -204,11 +209,11 @@
       "radial_contraction_from_previous_mm": 4,
       "previous_opening_diameter_mm": 90.4,
       "current_opening_diameter_mm": 82.4,
-      "evidence": "Shade source and shape unchanged from the previous handoff; circular 82.4 mm opening retained."
+      "evidence": "Current source retains circular 82.4 mm opening; current isolated top view confirms inward rim."
     },
     "grooves_continue_over_inward_rim": {
       "status": "passed",
-      "evidence": "Shade shape/source hash unchanged from visually reviewed revision 6715f3a56223b198cf8c5b424b7b2ade2dacd39cd2e2498f77b976e89660515a.",
+      "evidence": "Current isolated shade views confirm 40 continuous outer shoulder flutes; outer loft source unchanged.",
       "flute_count": 40
     },
     "base_liner_two_magnet_locations": {
@@ -238,6 +243,16 @@
       "rod_solids": 2,
       "evidence": "Exact-revision isolated bottom/top/isometric views, source-defined aligned square tenons/sockets and zero solid interference across all 15 pairs. Curved shoulder contact is intentional, not shared volume.",
       "physical_fit_tested": false
+    },
+    "shade_shoulder_wall": {
+      "status": "passed",
+      "requested_mm": 1.5,
+      "measured_mm": 1.5000000000004168,
+      "tolerance_mm": 0.005,
+      "assertion_id": "measure-5bdb00778138ba021911fca9",
+      "from_face": "shade:f49",
+      "to_face": "shade:f93",
+      "evidence": "Exact committed-build face-to-face distance for one periodic outer flute and inner shoulder torus. Cell checks the minimum across all outer shoulder faces with a 0.005 mm kernel tolerance."
     }
   }
 }

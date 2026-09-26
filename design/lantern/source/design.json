@@ -54,7 +54,7 @@
           "target": "shade",
           "order": 0,
           "path": "design/lantern/source/parts/shade/000-shade.py",
-          "sha256": "674d0549d96d906bc67451cb56caf99823d7c0cd7e5ab296f15c74dfb26cc8a4"
+          "sha256": "d13050dd83e0c9e8d83f0a3c1a51e82fb95b4c966c0a0ac773318ff46514bdd0"
         }
       ],
       "dependencies": []
@@ -202,7 +202,7 @@
       "label": "圆弧直筒波纹灯罩",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "eb0746f892971986fa139ebc7c7ea9e9c57b585bb0038afcd75352860a5934ed",
+      "shapeHash": "f670e9a0730f903aef2c6ce7a6c13fd985007ff30e247b06e00ecaaff39ce71c",
       "transform": {
         "positionMm": [
           0,
@@ -226,7 +226,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-25T15:12:10.960Z",
+  "updatedAt": "2026-09-26T01:27:29.395Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -305,7 +305,8 @@
       "shade_magnet_count": 2,
       "shade_magnet_angle": 0,
       "shade_top_inset": 4,
-      "shade_rim_wave_depth": 0.6
+      "shade_rim_wave_depth": 0.6,
+      "shade_shoulder_min_wall": 1.5
     }
   }
 }

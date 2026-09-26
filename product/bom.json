@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "c3ee0b76c96831ff4adbbb6f7b26853a9f1520847866cb6307b966ad03ed8204",
+  "requirements_digest": "ecedf85a88c348c4ef8f00d5d5727ca47a0523f1a5397e29533cc72249ffb87e",
   "items": [
     {
       "id": "handle",
@@ -68,9 +68,17 @@
     {
       "id": "shade",
       "role": "printed_part",
-      "name": "凹槽延伸至收口的圆弧直筒灯罩，半透明PETG，绿色",
+      "name": "收口最薄处1.5mm的圆弧波纹灯罩，半透明PETG，绿色",
       "quantity": 1,
-      "source": "default"
+      "source": "default",
+      "wall_specification": {
+        "upper_shoulder_minimum_mm": 1.5,
+        "straight_nominal_radial_mm": 1.8,
+        "rim_radial_mm": [
+          1.8,
+          2.4
+        ]
+      }
     },
     {
       "id": "magnet_7x2",
