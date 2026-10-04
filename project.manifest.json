@@ -1,5 +1,8 @@
 {
   "formatVersion": 4,
   "name": "提灯",
+  "title": "四件式中式提灯",
+  "summary": "一款由提手、底座、内胆和波纹灯罩组成的3D打印中式提灯结构，用于容纳直径60毫米、厚8毫米的成品圆饼灯组，灯罩、内胆与底座通过磁吸连接。",
+  "license": "MIT",
   "artifacts": "rebuild"
 }
