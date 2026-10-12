@@ -1,31 +1,31 @@
 {
   "designId": "lantern",
-  "revision": "c27b83fe7a3e8f2aff521f3210bdfd5be8645d6040ec6250ccb4e0373749cb3c",
+  "revision": "472387fb9ae137e50c0766a8b9ad2a2af0ca956610b7ce81e82fdf4265286bdd",
   "schemaVersion": 2,
-  "exportId": "export-adc14b776e73cbd46921d9f4510b1739",
-  "generatedAt": "2026-09-26T01:27:29.395Z",
-  "designSha256": "e78a4dcd4620179cac499a6a2832f4e145235b2204b2221464ed14514d6c5176",
+  "exportId": "export-887dfc4cec8f21f6d5db9b6f50e85bba",
+  "generatedAt": "2026-10-12T17:49:49.955Z",
+  "designSha256": "e60d841791d0af02d29b8e1db1ef873b8a31e6b3836ecadf554f3cee20919146",
   "role": "lantern",
-  "stateHash": "d8d44fbe22fc77d8f1dac2d2d893adff8a7acd976f8e06d4e40f18551bcc9b06",
+  "stateHash": "90beb4a0b82a229b3001c5b24059d8a8b0c9653168c341e30dbe39fb7df317d0",
   "stateManifest": {
     "schemaVersion": 3,
     "designId": "lantern",
     "role": "lantern",
     "design": {
-      "revision": "c27b83fe7a3e8f2aff521f3210bdfd5be8645d6040ec6250ccb4e0373749cb3c",
-      "designSha256": "a152409d2eb2c3abb53ea837a52efdd8bb22c8f624f50bda26e08f76ca6f815f",
-      "manifestSha256": "f8666452c3a90fe2dcd9116b66fc63908c80f992d9ba58f75b78530d36cf90cf",
-      "stepSha256": "0df4cb88d5aa66f10c7ff251a1ecd0a1b37e7a70179d75f44fa018699dfc08ed",
+      "revision": "472387fb9ae137e50c0766a8b9ad2a2af0ca956610b7ce81e82fdf4265286bdd",
+      "designSha256": "882cb377935bd54211c398b79555c0ff7f4bc13bb58dd6a64d83edb5a0e389b7",
+      "manifestSha256": "beac6e3a05bb7bfd0e241eaa8235914511396b72be34a4bc6aa01b623ab59174",
+      "stepSha256": "e065cf8cb7a8c03624ed900cead4491a5b8e2516aaebf326673b604cb1dbfd12",
       "pcbReleases": []
     },
     "brief": {
       "path": "design/lantern/README.md",
-      "sha256": "3671da19e42f3c45b6efea396b30bbad34b637a823165b3b9438501e9ca063c4"
+      "sha256": "ead1da55a5c69e7e81b70a1ad097d137eb3efe5deed54a1cadbf320e8825715b"
     },
     "requirement": {
       "artifactContractPath": "product/contract.json",
-      "artifactContractSha256": "e049a8a8a679a0281ef79b866296fdc8e8a170c7e1ff9795a7f25edd6a0eab81",
-      "designRequirementSha256": "8c94e195329bae106f0d843341c483c1ace90e7596b44845481c7932a6b593f7",
+      "artifactContractSha256": "e591d828da330c4920c3ebf982ac059d886116d41a786f8c6ef66521c7eaac5f",
+      "designRequirementSha256": "1be71ff4e3f5f38bd874054d9d2b14ff55452794097402a89b5d61c52931d3b9",
       "inputs": [
         {
           "role": "external-reference",
@@ -112,21 +112,21 @@
         "step"
       ]
     },
-    "stateHash": "d8d44fbe22fc77d8f1dac2d2d893adff8a7acd976f8e06d4e40f18551bcc9b06"
+    "stateHash": "90beb4a0b82a229b3001c5b24059d8a8b0c9653168c341e30dbe39fb7df317d0"
   },
   "buildArtifacts": {
-    "manifestSha256": "f8666452c3a90fe2dcd9116b66fc63908c80f992d9ba58f75b78530d36cf90cf",
-    "stepSha256": "0df4cb88d5aa66f10c7ff251a1ecd0a1b37e7a70179d75f44fa018699dfc08ed"
+    "manifestSha256": "beac6e3a05bb7bfd0e241eaa8235914511396b72be34a4bc6aa01b623ab59174",
+    "stepSha256": "e065cf8cb7a8c03624ed900cead4491a5b8e2516aaebf326673b604cb1dbfd12"
   },
   "exportAlgorithm": {
     "version": 1,
-    "bootstrapSha256": "f4939328ef685300fcdaa250c860428f6b9e009d10931b20d36728e55e0029e4"
+    "bootstrapSha256": "e2af1b0833add633b44719abaa1621ecf0dce13d9b71da057d1343cb112a1509"
   },
   "sourceHashes": {
     "base/base": "8a3776dcb58806822d8b6a2b62065ba7d017eb525d3ec4072b4c9ee5ad5d1d67",
     "handle/handle": "2106f903ae5054022d5835ef1a34f858aba487d3ced43c9f318fdb629851a350",
     "liner/liner": "f8bbc6c1cfe26dacc17672d5a160e5f739a185ad3e7c978752b057f486cced27",
-    "shade/shade": "d13050dd83e0c9e8d83f0a3c1a51e82fb95b4c966c0a0ac773318ff46514bdd0"
+    "shade/shade": "df755bca947413fc57022293c4e26c63cfc4eb539198082f56dc35ac87077ea4"
   },
   "assetHashes": {},
   "shapeHashes": {
@@ -135,21 +135,21 @@
     "handle_left_rod": "217de6cc7544f1f8cbfb7423bebba82273fcd55019a11ee36d9b1473c9a21015",
     "handle_right_rod": "a83001b1b6b2f0706217926fcc89e037a135528aa8a0907da57b8727109e4e25",
     "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
-    "shade": "f670e9a0730f903aef2c6ce7a6c13fd985007ff30e247b06e00ecaaff39ce71c"
+    "shade": "9a32541fcd1d8dfae1b2a87714ff68cd158c2036e4539bfb166e34058fc4b63e"
   },
   "runtime": {
-    "manifestHash": "56a1de5d760e9f5c1dd991c57c86f24fbfb7da361b3d55b9d4cb65cdabe66a74",
+    "manifestHash": "b5f5c3cc7fb8830bc9254702e9a16753da94c9cc6eb4da520a607191f038e0eb",
     "pythonVersion": "3.12.13",
     "build123dVersion": "0.10.0",
     "ocpVersion": "7.8.1.1.post1",
-    "cadpyHash": "e8b3788bab31d790595e4c3306dda85dfe057c87a4fc64f7ef3eab254239b7ba"
+    "cadpyHash": "81911f3a8adaeb8d0c4be9c12da56f8c18df074c4680646de6b0a4fe8457a5cc"
   },
   "artifacts": [
     {
-      "path": "manufacturing/lantern/releases/export-adc14b776e73cbd46921d9f4510b1739/model.step",
+      "path": "manufacturing/lantern/releases/export-887dfc4cec8f21f6d5db9b6f50e85bba/model.step",
       "role": "model/step",
-      "sha256": "0df4cb88d5aa66f10c7ff251a1ecd0a1b37e7a70179d75f44fa018699dfc08ed",
-      "sizeBytes": 5942318
+      "sha256": "e065cf8cb7a8c03624ed900cead4491a5b8e2516aaebf326673b604cb1dbfd12",
+      "sizeBytes": 13986613
     }
   ],
   "interference": {
@@ -171,9 +171,9 @@
     "algorithm": "hmac-sha256",
     "keyId": "199024ec12983ba08b9d0d826358872f",
     "projectId": "1779d166-efca-4725-8922-e813a021aad6",
-    "receiptPath": "manufacturing/lantern/releases/export-adc14b776e73cbd46921d9f4510b1739/receipt.json",
-    "payloadSha256": "de51477255a73f0990621d1828c63b5b15e710e59641035aeb6424d6dca256d1",
-    "mac": "a9e78552320b1183e7b42b24b9d9797c57f2244cb7cd1f9178871aedda951cf6"
+    "receiptPath": "manufacturing/lantern/releases/export-887dfc4cec8f21f6d5db9b6f50e85bba/receipt.json",
+    "payloadSha256": "4f25e3caf7c766ff4ff28e5cb0a7fc5ffeaf53d16a20c54f6e72d1a9fc13c1f3",
+    "mac": "db0cabd349e9a62731c612f975502afd49be61ee165c788d30a3d992ffff6451"
   },
   "status": "handoff"
 }

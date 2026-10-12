@@ -39,7 +39,7 @@
       "shade_top_outer_valley_diameter": 86,
       "shade_shoulder_minimum_wall": 1.5,
       "inner_shoulder_drop": 1.3582569085225398,
-      "thickening_note": "内侧圆弧下移，最薄处目标1.5mm；外形、顶部82.4mm开口、底部磁吸接口与直段径向壁厚不变。"
+      "thickening_note": "顶收口最薄处1.5mm、径向口沿1.8–2.4mm及底部磁吸环保持；中段内外波纹对应，法向壁厚约1.2mm。"
     },
     "magnet_pockets": {
       "diameter": 7.2,
@@ -95,17 +95,37 @@
         7.832
       ],
       "note": "竖杆止挡肩贴合原顶梁下弧面；名义桩长8和孔深8.2从Z192计，实际插入长度随弧面变化。方桩需胶接防拔。"
+    },
+    "shade_body": {
+      "nominal_normal_wall": 1.2,
+      "inner_wave_count": 40,
+      "body_normal_offset_region_z": [
+        48,
+        90.2
+      ],
+      "lower_transition_z": [
+        42,
+        48
+      ],
+      "upper_transition_z": [
+        90.2,
+        96.2
+      ],
+      "retained_bottom_region_z": [
+        32,
+        42
+      ],
+      "retained_top_region_z": [
+        96.2,
+        108
+      ],
+      "transition_height": 6
     }
   },
   "defaults": {
     "manufacturing": "FDM PETG",
-    "shade_nominal_radial_wall": 1.8,
     "adhesive_retained_magnets": true,
     "adhesive_retained_tenons": true,
-    "shade_straight_wall_range_mm": [
-      1.8,
-      3.6
-    ],
     "shade_rim_wave_radial_depth_mm": 0.6,
     "shade_rim_radial_wall_range_mm": [
       1.8,

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "ecedf85a88c348c4ef8f00d5d5727ca47a0523f1a5397e29533cc72249ffb87e",
+  "requirements_digest": "54818d2bb0b495f442b7fabf6a450c2ee7f7b668c13066cdae1c3d226ba72a06",
   "items": [
     {
       "id": "handle",
@@ -68,16 +68,17 @@
     {
       "id": "shade",
       "role": "printed_part",
-      "name": "收口最薄处1.5mm的圆弧波纹灯罩，半透明PETG，绿色",
+      "name": "内外对应波纹薄壁灯罩，筒身约1.2mm，半透明PETG，绿色",
       "quantity": 1,
       "source": "default",
       "wall_specification": {
         "upper_shoulder_minimum_mm": 1.5,
-        "straight_nominal_radial_mm": 1.8,
         "rim_radial_mm": [
           1.8,
           2.4
-        ]
+        ],
+        "body_nominal_normal_mm": 1.2,
+        "end_geometry": "retained top shoulder and bottom ring"
       }
     },
     {

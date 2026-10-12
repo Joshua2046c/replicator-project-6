@@ -1,8 +1,8 @@
 {
-  "cad_revision": "c27b83fe7a3e8f2aff521f3210bdfd5be8645d6040ec6250ccb4e0373749cb3c",
-  "export_id": "export-adc14b776e73cbd46921d9f4510b1739",
+  "cad_revision": "472387fb9ae137e50c0766a8b9ad2a2af0ca956610b7ce81e82fdf4265286bdd",
+  "export_id": "export-887dfc4cec8f21f6d5db9b6f50e85bba",
   "export_status": "handoff",
-  "method": "Exact committed-build visual inspection, bbox, solid validity, pairwise interference and clearance; source-parameter interface checks; exported STEP receipt. Upper shoulder face-to-face distance checked against 1.5 mm user target, supported by all-flute in-cell surface-distance assertion.",
+  "method": "Exact committed-build visual inspection, bounding boxes, six valid solids, pairwise interference and clearance; opposed body-flute distance checked against 1.2±0.01 mm and retained upper shoulder against 1.5±0.005 mm; source-bound end-region and interface checks; exported STEP receipt.",
   "measured_results": {
     "valid_solids": 6,
     "assembly_envelope_mm": [
@@ -27,7 +27,8 @@
       7.304117,
       7.832018
     ],
-    "shade_upper_shoulder_minimum_wall_mm": 1.5000000000004168
+    "shade_upper_shoulder_minimum_wall_mm": 1.5,
+    "shade_body_minimum_normal_wall_mm": 1.1951
   },
   "source_parameter_checks": {
     "shade_magnet_positions_mm": [
@@ -63,10 +64,6 @@
     "liner_wire_width_mm": 8,
     "shade_wave_count": 40,
     "shade_wave_radial_depth_mm": 1.8,
-    "shade_straight_nominal_radial_wall_range_mm": [
-      1.8,
-      3.6
-    ],
     "shade_top_opening_mm": 82.4,
     "shade_lower_opening_mm": 69.2,
     "liner_outer_diameter_mm": 68.4,
@@ -138,10 +135,27 @@
       "seat": "Rod shoulders follow original curved beam underside; 8 mm nominal peg projection is measured from Z192, not a uniform shoulder."
     },
     "shade_shoulder_min_wall_mm": 1.5,
-    "shade_inner_shoulder_drop_mm": 1.3582569085225398
+    "shade_inner_shoulder_drop_mm": 1.3582569085225398,
+    "shade_body_nominal_normal_wall_mm": 1.2,
+    "shade_inner_wave_count": 40,
+    "shade_body_z_mm": [
+      48,
+      90.2
+    ],
+    "shade_inner_transition_height_mm": 6,
+    "shade_retained_end_regions_z_mm": [
+      [
+        32,
+        42
+      ],
+      [
+        96.2,
+        108
+      ]
+    ]
   },
   "unchanged_object_evidence": {
-    "previous_revision": "97fe6e8a56aafad8bd66aa3f929b6ab3df5001d57141b2f5393390cc8f12203c",
+    "previous_revision": "c27b83fe7a3e8f2aff521f3210bdfd5be8645d6040ec6250ccb4e0373749cb3c",
     "objects": [
       "base",
       "handle",
@@ -156,23 +170,23 @@
       "handle_right_rod": "a83001b1b6b2f0706217926fcc89e037a135528aa8a0907da57b8727109e4e25",
       "liner": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a"
     },
-    "note": "Only shade inner upper shoulder geometry changed; all other solid hashes and placements unchanged. Shade outer construction, openings, bottom ring and magnet definitions retained."
+    "note": "Only shade changed. End cavity, outer construction, openings and magnet cuts unchanged in source; added internal wave cavity is bounded between local Z10 and Z64.2 with smooth 6 mm blends."
   },
   "visual_review": {
     "views": [
       "assembled iso",
       "shade isolated iso",
-      "shade isolated top"
+      "shade isolated bottom"
     ],
-    "finding": "Inward shoulder and continuous longitudinal flutes retained. Inner shoulder sits lower with a short vertical inner lip; no additional external band, all magnetic interfaces unchanged."
+    "finding": "Interior shows corresponding vertical wave relief. Upper inward rim, external grooves and bottom ring with two magnet pockets retained; six-solid assembly remains seated without interference."
   },
   "wire_route": {
     "description": "Original liner recess retained. Cable exits exposed lamp cup above base rim Z12 and below shade bottom Z32; keep wire out of magnetic mating plane.",
     "actual_cable_trial": false
   },
   "export_checks": {
-    "step_sha256": "0df4cb88d5aa66f10c7ff251a1ecd0a1b37e7a70179d75f44fa018699dfc08ed",
-    "bytes": 5942318,
+    "step_sha256": "e065cf8cb7a8c03624ed900cead4491a5b8e2516aaebf326673b604cb1dbfd12",
+    "bytes": 13986613,
     "preview_refreshed": true,
     "interference": {
       "summary": "No interference across 15 object pairs.",
@@ -191,7 +205,7 @@
   },
   "limits": [
     "No physical printing, cable fit or load test performed.",
-    "Straight-section wall range is nominal radial thickness. Upper shoulder minimum surface separation is 1.5 mm, not a constant-thickness shell; bottom magnet ring remains thicker.",
+    "Body wall is nominal 1.2 mm normal offset with sampled spline approximation (measured minimum 1.1951 mm); transition bands thicken to retained 1.5 mm shoulder and bottom ring. No physical printing performed.",
     "Two opposed magnet pairs permit a 180-degree orientation ambiguity; magnet polarity and holding force require assembly testing.",
     "Original lamp voltage, power and connector are unspecified; retain original cable and matched supply.",
     "Upper and lower straight tenon joints need adhesive retention and cured-joint load testing; the clearances do not provide a mechanical pull-out lock."
@@ -247,12 +261,23 @@
     "shade_shoulder_wall": {
       "status": "passed",
       "requested_mm": 1.5,
-      "measured_mm": 1.5000000000004168,
+      "measured_mm": 1.5,
       "tolerance_mm": 0.005,
-      "assertion_id": "measure-5bdb00778138ba021911fca9",
+      "assertion_id": "measure-bc2e4aa3ec3783944ec1f2a7",
       "from_face": "shade:f49",
-      "to_face": "shade:f93",
-      "evidence": "Exact committed-build face-to-face distance for one periodic outer flute and inner shoulder torus. Cell checks the minimum across all outer shoulder faces with a 0.005 mm kernel tolerance."
+      "to_face": "shade:f172",
+      "evidence": "Current-build shoulder surface distance; unchanged upper cavity construction."
+    },
+    "shade_inner_waves": {
+      "status": "passed",
+      "requested_approx_mm": 1.2,
+      "measured_minimum_mm": 1.1951,
+      "tolerance_mm": 0.01,
+      "assertion_id": "measure-80fafaa67b6ad7a8945b8b52",
+      "from_face": "shade:f45",
+      "to_face": "shade:f171",
+      "evidence": "Current-build opposed flute surface distance; 40 periodic inner flutes are generated by inward normal offset of the outer wave equation. Isolated iso view confirms internal wave relief.",
+      "transition_note": "Approximately 1.2 mm applies to Z48–90.2 mm; 6 mm blend bands thicken to retained top/bottom geometry."
     }
   }
 }

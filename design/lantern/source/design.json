@@ -54,7 +54,7 @@
           "target": "shade",
           "order": 0,
           "path": "design/lantern/source/parts/shade/000-shade.py",
-          "sha256": "d13050dd83e0c9e8d83f0a3c1a51e82fb95b4c966c0a0ac773318ff46514bdd0"
+          "sha256": "df755bca947413fc57022293c4e26c63cfc4eb539198082f56dc35ac87077ea4"
         }
       ],
       "dependencies": []
@@ -73,33 +73,6 @@
           0,
           0,
           0
-        ],
-        "rotationDeg": [
-          0,
-          0,
-          0
-        ],
-        "rotationOrder": "XYZ",
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "datums": []
-    },
-    {
-      "id": "handle",
-      "target": "handle",
-      "label": "翘头顶梁",
-      "material": "petg",
-      "kind": "generated",
-      "shapeHash": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
-      "transform": {
-        "positionMm": [
-          0,
-          0,
-          12
         ],
         "rotationDeg": [
           0,
@@ -170,6 +143,33 @@
       "datums": []
     },
     {
+      "id": "handle",
+      "target": "handle",
+      "label": "翘头顶梁",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
       "id": "liner",
       "target": "liner",
       "label": "直筒镂空内胆",
@@ -202,7 +202,7 @@
       "label": "圆弧直筒波纹灯罩",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "f670e9a0730f903aef2c6ce7a6c13fd985007ff30e247b06e00ecaaff39ce71c",
+      "shapeHash": "9a32541fcd1d8dfae1b2a87714ff68cd158c2036e4539bfb166e34058fc4b63e",
       "transform": {
         "positionMm": [
           0,
@@ -226,7 +226,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-26T01:27:29.395Z",
+  "updatedAt": "2026-10-12T17:49:49.955Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -306,7 +306,9 @@
       "shade_magnet_angle": 0,
       "shade_top_inset": 4,
       "shade_rim_wave_depth": 0.6,
-      "shade_shoulder_min_wall": 1.5
+      "shade_shoulder_min_wall": 1.5,
+      "shade_body_wall_thickness": 1.2,
+      "shade_inner_transition_height": 6
     }
   }
 }

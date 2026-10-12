@@ -52,6 +52,13 @@
       "description": "标注的灯罩收口肩部最薄处增厚至1.5mm，保留外部纵向凹槽及现有装配接口",
       "source": "user_requested",
       "required": true
+    },
+    {
+      "id": "shade_inner_waves",
+      "kind": "internal_fit",
+      "description": "灯罩中段内壁跟随外侧波浪凹凸，壁厚约1.2mm；顶部收口与底部磁吸环保持现有厚度",
+      "source": "user_requested",
+      "required": true
     }
   ],
   "external_references": [
@@ -149,7 +156,8 @@
           "wire_exit",
           "recessed_liner_rim",
           "beam_rod_square_tenons",
-          "shade_shoulder_wall"
+          "shade_shoulder_wall",
+          "shade_inner_waves"
         ],
         "reference_ids": [
           "lantern_reference",

@@ -75,8 +75,8 @@
       "source": "default"
     },
     "shade_wall_mm": {
-      "value": 1.8,
-      "source": "default"
+      "value": 1.2,
+      "source": "user"
     },
     "magnet_pocket_mm": {
       "value": {
@@ -180,8 +180,16 @@
       "source": "user"
     },
     "shade_thickening_scope": {
-      "value": "marked inward upper shoulder: thicken internally; retain 1.8 mm nominal radial straight wall, outer fluting, openings and magnetic interfaces",
+      "value": "body inner wave normal offset 1.2 mm; 6 mm blend bands to retained upper and lower thick regions",
       "source": "default"
+    },
+    "shade_inner_wave": {
+      "value": "inner body surface follows corresponding outer longitudinal waves",
+      "source": "user"
+    },
+    "shade_end_thickness": {
+      "value": "retain existing top inward shoulder and bottom thick ring geometry",
+      "source": "user"
     }
   },
   "open_questions": []
