@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "54818d2bb0b495f442b7fabf6a450c2ee7f7b668c13066cdae1c3d226ba72a06",
+  "requirements_digest": "78d29bb588cf87f3f52f91a2a3946d87cc356ec17a2a3e2d817e795e6c616d3d",
   "items": [
     {
       "id": "handle",
@@ -68,17 +68,18 @@
     {
       "id": "shade",
       "role": "printed_part",
-      "name": "内外对应波纹薄壁灯罩，筒身约1.2mm，半透明PETG，绿色",
+      "name": "整圈内外对应波纹等厚灯罩，约1.2mm，半透明PETG，绿色",
       "quantity": 1,
       "source": "default",
       "wall_specification": {
-        "upper_shoulder_minimum_mm": 1.5,
+        "upper_shoulder_nominal_normal_mm": 1.2,
         "rim_radial_mm": [
           1.8,
           2.4
         ],
         "body_nominal_normal_mm": 1.2,
-        "end_geometry": "retained top shoulder and bottom ring"
+        "end_geometry": "marked rounded shoulder and body uniformly thin; unmarked 4 mm magnet mounting ring retained",
+        "basis": "existing thinnest wall; latest user marked full circumference"
       }
     },
     {

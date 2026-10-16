@@ -54,7 +54,7 @@
           "target": "shade",
           "order": 0,
           "path": "design/lantern/source/parts/shade/000-shade.py",
-          "sha256": "df755bca947413fc57022293c4e26c63cfc4eb539198082f56dc35ac87077ea4"
+          "sha256": "d62351b99e2e8ada7e8a81da4ccf2577b240469002d10634081f7e4889dd0cfc"
         }
       ],
       "dependencies": []
@@ -73,6 +73,33 @@
           0,
           0,
           0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "handle",
+      "target": "handle",
+      "label": "翘头顶梁",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
         ],
         "rotationDeg": [
           0,
@@ -143,33 +170,6 @@
       "datums": []
     },
     {
-      "id": "handle",
-      "target": "handle",
-      "label": "翘头顶梁",
-      "material": "petg",
-      "kind": "generated",
-      "shapeHash": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
-      "transform": {
-        "positionMm": [
-          0,
-          0,
-          12
-        ],
-        "rotationDeg": [
-          0,
-          0,
-          0
-        ],
-        "rotationOrder": "XYZ",
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "datums": []
-    },
-    {
       "id": "liner",
       "target": "liner",
       "label": "直筒镂空内胆",
@@ -199,10 +199,10 @@
     {
       "id": "shade",
       "target": "shade",
-      "label": "圆弧直筒波纹灯罩",
+      "label": "等厚波纹灯罩",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "9a32541fcd1d8dfae1b2a87714ff68cd158c2036e4539bfb166e34058fc4b63e",
+      "shapeHash": "55fd0e7d1f901a279d1a03497407c5f4c6645160fd644ea7f8930cce34501d93",
       "transform": {
         "positionMm": [
           0,
@@ -226,7 +226,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-10-12T17:49:49.955Z",
+  "updatedAt": "2026-10-16T05:39:52.186Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
@@ -306,9 +306,7 @@
       "shade_magnet_angle": 0,
       "shade_top_inset": 4,
       "shade_rim_wave_depth": 0.6,
-      "shade_shoulder_min_wall": 1.5,
-      "shade_body_wall_thickness": 1.2,
-      "shade_inner_transition_height": 6
+      "shade_body_wall_thickness": 1.2
     }
   }
 }

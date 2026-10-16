@@ -37,9 +37,8 @@
       "shade_top_outer_diameter": 87.2,
       "shade_top_opening_diameter": 82.4,
       "shade_top_outer_valley_diameter": 86,
-      "shade_shoulder_minimum_wall": 1.5,
-      "inner_shoulder_drop": 1.3582569085225398,
-      "thickening_note": "顶收口最薄处1.5mm、径向口沿1.8–2.4mm及底部磁吸环保持；中段内外波纹对应，法向壁厚约1.2mm。"
+      "shade_shoulder_minimum_wall": 1.2,
+      "thickening_note": "整圈外部波纹及上肩内壁按约1.2mm法向偏置重建，取消6mm厚壁渐变段；未标注磁铁安装环保留4mm高度，顶部和底部开口不变。"
     },
     "magnet_pockets": {
       "diameter": 7.2,
@@ -99,27 +98,15 @@
     "shade_body": {
       "nominal_normal_wall": 1.2,
       "inner_wave_count": 40,
-      "body_normal_offset_region_z": [
-        48,
-        90.2
-      ],
-      "lower_transition_z": [
-        42,
-        48
-      ],
-      "upper_transition_z": [
-        90.2,
-        96.2
-      ],
-      "retained_bottom_region_z": [
+      "uniform_scope": "entire marked circumference, vertical flutes and upper rounded shoulder, including scalloped lower ends",
+      "thick_transition_bands": false,
+      "magnet_ring_region_z": [
         32,
-        42
+        36
       ],
-      "retained_top_region_z": [
-        96.2,
-        108
-      ],
-      "transition_height": 6
+      "upper_rim_z": 108,
+      "outer_shoulder_start_z": 96.2,
+      "validation_note": "Nominal offset with spline approximation; measured values are recorded in validation, not a physical print tolerance."
     }
   },
   "defaults": {

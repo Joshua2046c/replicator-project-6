@@ -176,20 +176,28 @@
       "source": "default"
     },
     "shade_shoulder_min_wall_mm": {
-      "value": 1.5,
+      "value": 1.2,
       "source": "user"
     },
     "shade_thickening_scope": {
-      "value": "body inner wave normal offset 1.2 mm; 6 mm blend bands to retained upper and lower thick regions",
-      "source": "default"
+      "value": "uniform normal wall through full circumference of marked longitudinal flutes and rounded upper shoulder; no thick transition bands; unmarked magnet mounting ring remains thick",
+      "source": "user"
     },
     "shade_inner_wave": {
-      "value": "inner body surface follows corresponding outer longitudinal waves",
+      "value": "inner surface follows corresponding outer waves over the entire marked circumference from top to bottom",
       "source": "user"
     },
     "shade_end_thickness": {
-      "value": "retain existing top inward shoulder and bottom thick ring geometry",
+      "value": "marked rounded shoulder is included in uniform thin wall; retain unmarked magnet ring and existing opening dimensions",
       "source": "user"
+    },
+    "shade_uniform_wall_basis": {
+      "value": "use existing thinnest wall as basis for whole green-marked region",
+      "source": "user"
+    },
+    "shade_uniform_nominal_mm": {
+      "value": 1.2,
+      "source": "default"
     }
   },
   "open_questions": []

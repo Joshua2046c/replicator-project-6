@@ -49,14 +49,14 @@
     {
       "id": "shade_shoulder_wall",
       "kind": "internal_fit",
-      "description": "标注的灯罩收口肩部最薄处增厚至1.5mm，保留外部纵向凹槽及现有装配接口",
+      "description": "最新绿色标注范围包括上肩圆弧，整圈从顶到底按现有最薄壁厚为基准统一，约1.2mm；取消原1.5mm厚肩及渐变厚壁带",
       "source": "user_requested",
       "required": true
     },
     {
       "id": "shade_inner_waves",
       "kind": "internal_fit",
-      "description": "灯罩中段内壁跟随外侧波浪凹凸，壁厚约1.2mm；顶部收口与底部磁吸环保持现有厚度",
+      "description": "整圈标注区域内外波纹对应，按法线保持约1.2mm等厚；保留未标注磁铁安装环及孔位",
       "source": "user_requested",
       "required": true
     }
@@ -127,6 +127,12 @@
       "source": "user_requested",
       "description": "灯罩收口区域太薄，增加到1.5mm",
       "path": "product/references/uploads/20260926T012447020Z-1-mark.png"
+    },
+    {
+      "id": "shade_uniform_wall_reference",
+      "source": "user_requested",
+      "description": "绿色标注包括上肩及纵向波纹，整圈从顶到底按最薄处统一壁厚；替代较早保留厚肩的要求",
+      "path": "product/references/uploads/20261016T045841396Z-1-mark-1.png"
     }
   ],
   "assembly_story": {
@@ -170,7 +176,8 @@
           "base_magnets_reference",
           "square_joint_reference",
           "beam_joint_reference",
-          "shade_wall_reference"
+          "shade_wall_reference",
+          "shade_uniform_wall_reference"
         ]
       }
     ]
