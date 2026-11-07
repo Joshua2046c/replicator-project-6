@@ -114,7 +114,7 @@
       "source": "default"
     },
     "delivery": {
-      "value": "six independent solids in exported STEP assembly; four functional groups, with handle split into beam and two rods",
+      "value": "six-solid original lantern assembly plus one separate interchangeable water-ripple shade STEP",
       "source": "default"
     },
     "shade_style": {
@@ -198,6 +198,53 @@
     "shade_uniform_nominal_mm": {
       "value": 1.2,
       "source": "default"
+    },
+    "additional_shade_variant": {
+      "value": "add an independent water-ripple shade beside the existing lantern; keep original shade; interpret uploaded texture freely",
+      "source": "user"
+    },
+    "water_shade_defaults": {
+      "value": {
+        "height_mm": 76,
+        "maximum_diameter_mm": 109.6,
+        "normal_wall_mm": 1.2,
+        "top_opening_mm": 82.4,
+        "bottom_opening_mm": 69.2,
+        "magnet_pockets": 2,
+        "magnet_pocket_diameter_mm": 7.2,
+        "magnet_pocket_depth_mm": 2.15,
+        "magnet_radius_mm": 39.2,
+        "additional_magnets": 2,
+        "material": "translucent PETG",
+        "style": "unequal non-parallel flowing bands; independent ridge phases, changing local band widths, varied peak depths",
+        "ridge_count": 5,
+        "wave_height_sway_mm": 4,
+        "secondary_wave_height_mm": 1.2,
+        "nominal_span_control_mm": 13,
+        "nominal_wave_depth_mm": 3.2,
+        "flow_variation": 1,
+        "mean_crest_heights_mm": [
+          12,
+          23.700000000000003,
+          39.300000000000004,
+          50.35,
+          64
+        ],
+        "valley_blend_fraction": 0.65
+      },
+      "source": "default"
+    },
+    "water_shade_surface": {
+      "value": "match reference with more three-dimensional water waves, distinct ridges and broad inclined band faces",
+      "source": "user"
+    },
+    "water_shade_flow": {
+      "value": "wave layers must not be equal-width; each band varies in width around the circumference, with independently curved ridges and natural flowing convergence/divergence matching the reference",
+      "source": "user"
+    },
+    "water_shade_concave_transition": {
+      "value": "Use smooth curved surfaces for the marked concave trough transitions; preserve the existing sharp convex ridge corners and adjacent crest facets, independent flowing crests and unequal band widths.",
+      "source": "user"
     }
   },
   "open_questions": []

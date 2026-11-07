@@ -1,0 +1,115 @@
+{
+  "designId": "water_shade",
+  "revision": "a79c34f40acd49f4c52d863128aa0c4ab322aef7451e96a6866536d923db0f7d",
+  "schemaVersion": 2,
+  "exportId": "export-22268b03ce352cd57b54174673a99f30",
+  "generatedAt": "2026-10-16T08:35:32.070Z",
+  "designSha256": "17f5e5b7c24cc69a29bf2d386a62ab09eee785a5d4800ccecf6355d77695ace1",
+  "role": "water_ripple_shade",
+  "stateHash": "f3129ec0b8dbdec993f993eced0d29c0e2a97424f460dab0931651d4da432eaa",
+  "stateManifest": {
+    "schemaVersion": 3,
+    "designId": "water_shade",
+    "role": "water_ripple_shade",
+    "design": {
+      "revision": "a79c34f40acd49f4c52d863128aa0c4ab322aef7451e96a6866536d923db0f7d",
+      "designSha256": "e3c37f636c53af71a5737894436e4c68300547d81517c79c9da92381302d5ede",
+      "manifestSha256": "96fb0626df240c3012d3ad439ac6ff3f169a9480825648030ca45d51e601af38",
+      "stepSha256": "5a23944cd754cdaa89f014ce2a78a006d918296b345c4661cfc345347c87f0d5",
+      "pcbReleases": []
+    },
+    "brief": {
+      "path": "design/water_shade/README.md",
+      "sha256": "8529c873c6b4bbd6eee6b24d7fab5b61396de1d412d1c7e9e7d258e212ee7502"
+    },
+    "requirement": {
+      "artifactContractPath": "product/contract.json",
+      "artifactContractSha256": "93e713e2057ca177aae8c3f2ed49246d819e78436403be25273984f84c1551f8",
+      "designRequirementSha256": "dd164cc6b9b8c3b6de7f6cfd3b4f2dea0450543962d22b58377eb144d73b472f",
+      "inputs": [
+        {
+          "role": "external-reference",
+          "id": "shade_uniform_wall_reference",
+          "path": "product/references/uploads/20261016T045841396Z-1-mark-1.png",
+          "sha256": "b52adca3846ea57fc216e4b13737382f4eef8b1bf09aa55cc7701689ea7bfba0",
+          "sizeBytes": 956506
+        },
+        {
+          "role": "external-reference",
+          "id": "water_concave_lower_reference",
+          "path": "product/references/uploads/20261016T082929695Z-2-mark-2.png",
+          "sha256": "53af4f12a45bc44d1ae13797de03a4330c2d981a0a28e76f7fec7010e47babb4",
+          "sizeBytes": 195142
+        },
+        {
+          "role": "external-reference",
+          "id": "water_concave_upper_reference",
+          "path": "product/references/uploads/20261016T082929695Z-1-mark-1.png",
+          "sha256": "876c49b2b489997f896541938d8f3840dbce65839cb72896336309077884d06c",
+          "sizeBytes": 189213
+        },
+        {
+          "role": "external-reference",
+          "id": "water_ripple_reference",
+          "path": "product/references/uploads/20261016T065243883Z-1-image.png",
+          "sha256": "9b2706c075033330aa561a0b87b5639620cab66047843c59d2766a344b6a6db5",
+          "sizeBytes": 133945
+        },
+        {
+          "role": "external-reference",
+          "id": "water_ripple_ridges_reference",
+          "path": "product/references/uploads/20261016T074840005Z-1-image.png",
+          "sha256": "abc4e430147b1363053ff9cea04a56c5936afcc9743ea2b959fea7279a801758",
+          "sizeBytes": 132920
+        }
+      ]
+    },
+    "delivery": {
+      "target": "printable_part",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateHash": "f3129ec0b8dbdec993f993eced0d29c0e2a97424f460dab0931651d4da432eaa"
+  },
+  "buildArtifacts": {
+    "manifestSha256": "96fb0626df240c3012d3ad439ac6ff3f169a9480825648030ca45d51e601af38",
+    "stepSha256": "5a23944cd754cdaa89f014ce2a78a006d918296b345c4661cfc345347c87f0d5"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "6b3e2fc248625efd99ce6e9a42bf9d57effe0be0029fc3c36a211a4508d8fab6"
+  },
+  "sourceHashes": {
+    "water_shade/water_shade": "783993a6f38ab551b153c7cba74c952605078cd2fbee9b6975c511cb243d3f23"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "water_shade": "8be8e892582623271d3af259ac41fcfe8a1d4147e23fd092dc1ba00350065648"
+  },
+  "runtime": {
+    "manifestHash": "b5f5c3cc7fb8830bc9254702e9a16753da94c9cc6eb4da520a607191f038e0eb",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyHash": "81911f3a8adaeb8d0c4be9c12da56f8c18df074c4680646de6b0a4fe8457a5cc"
+  },
+  "artifacts": [
+    {
+      "path": "manufacturing/water_shade/releases/export-22268b03ce352cd57b54174673a99f30/model.step",
+      "role": "model/step",
+      "sha256": "5a23944cd754cdaa89f014ce2a78a006d918296b345c4661cfc345347c87f0d5",
+      "sizeBytes": 4247050
+    }
+  ],
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "199024ec12983ba08b9d0d826358872f",
+    "projectId": "1779d166-efca-4725-8922-e813a021aad6",
+    "receiptPath": "manufacturing/water_shade/releases/export-22268b03ce352cd57b54174673a99f30/receipt.json",
+    "payloadSha256": "eb46d4373c1e9df5fd6f15ad0a4325a3d04570ff23a208e0b39dfd3aad3f475e",
+    "mac": "7c2f0695210cba4233891f68bdefe6dc0e9282bc3d4d5fd88c58d37a79486fb3"
+  },
+  "status": "handoff"
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "coordinateFrame": "makit-world-z-up",
+  "placements": {
+    "water_shade": {
+      "positionMm": [
+        180,
+        0,
+        32
+      ],
+      "rotationDeg": [
+        0,
+        0,
+        0
+      ],
+      "rotationOrder": "XYZ"
+    }
+  },
+  "fits": [],
+  "updatedAt": "2026-10-16T07:17:42.544Z"
+}

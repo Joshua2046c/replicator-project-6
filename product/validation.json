@@ -294,5 +294,272 @@
       "from_face": "shade:f90",
       "to_face": "shade:f133"
     }
+  },
+  "additional_designs": {
+    "water_shade": {
+      "cad_revision": "a79c34f40acd49f4c52d863128aa0c4ab322aef7451e96a6866536d923db0f7d",
+      "export_id": "export-22268b03ce352cd57b54174673a99f30",
+      "export_status": "handoff",
+      "scope": "Separate alternate shade: only concave transitions changed to curved tangent surfaces; convex crests and neighboring original crest facets retained. Original six-solid lantern geometry and export unchanged.",
+      "geometry": {
+        "valid_solids": 1,
+        "bbox_min_mm": [
+          -54.8,
+          -54.8,
+          0
+        ],
+        "bbox_max_mm": [
+          54.8,
+          54.8,
+          76
+        ],
+        "display_origin_mm": [
+          180,
+          0,
+          32
+        ],
+        "display_bboxes_separated": true,
+        "display_clear_x_from_original_envelope_mm": 35.2
+      },
+      "surface": {
+        "reference": "water_ripple_ridges_reference",
+        "user_requirement": "Smooth marked concave transitions while keeping sharp convex ridge corners and unequal naturally flowing bands.",
+        "ridge_count": 5,
+        "constant_pitch": false,
+        "constant_band_width": false,
+        "nominal_depth_control_mm": 3.2,
+        "nominal_span_control_mm": 13,
+        "flow_variation": 1,
+        "mean_crest_heights_mm": [
+          12,
+          23.700000000000003,
+          39.300000000000004,
+          50.35,
+          64
+        ],
+        "peak_radii_mm": [
+          54.8,
+          54.224,
+          54.8,
+          54.416,
+          54.672
+        ],
+        "geometry": "Each original valley is replaced by a tangent quadratic blend over 65% of each adjoining control leg. Original crest curves, remaining 35% crest-adjacent outer facets, independent harmonic phases and width variation retained. Outer blends are degree-2 smooth lofts, not ruled facets.",
+        "references": [
+          "water_concave_upper_reference",
+          "water_concave_lower_reference",
+          "water_ripple_ridges_reference"
+        ],
+        "valley_blend_fraction": 0.65
+      },
+      "interfaces": {
+        "top_opening_mm": 82.4,
+        "bottom_opening_mm": 69.2,
+        "magnet_hole_count": 2,
+        "magnet_hole_diameter_mm": 7.2,
+        "magnet_hole_depth_mm": 2.15,
+        "magnet_centers_mm": [
+          [
+            -39.2,
+            0,
+            0
+          ],
+          [
+            39.2,
+            0,
+            0
+          ]
+        ],
+        "magnet_ring_height_mm": 4,
+        "remaining_magnet_roof_mm": 1.85,
+        "liner_radial_entry_clearance_mm": 0.4
+      },
+      "measurements": [
+        {
+          "check": "top opening",
+          "value_mm": 82.4,
+          "status": "passed",
+          "assertion_id": "measure-51f66ad9d8132b19a798fb75",
+          "selection": "e717"
+        },
+        {
+          "check": "bottom opening",
+          "value_mm": 69.2,
+          "status": "passed",
+          "assertion_id": "measure-4d5c6a7f15f028628775b606",
+          "selection": "e57"
+        },
+        {
+          "check": "left magnet diameter",
+          "value_mm": 7.2,
+          "status": "passed",
+          "assertion_id": "measure-0505f77edf58b354b6549e94",
+          "selection": "e33"
+        },
+        {
+          "check": "right magnet diameter",
+          "value_mm": 7.2,
+          "status": "passed",
+          "assertion_id": "measure-6efc7cde6ce5e1019eecdd58",
+          "selection": "e34"
+        },
+        {
+          "check": "both magnet depths",
+          "value_mm": 2.15,
+          "status": "passed",
+          "evidence": "Current-build cylinders f12 and f13 at X±39.2 have radius3.6 and Z0..2.15; source additionally checks both openings and retained hole floors."
+        },
+        {
+          "check": "ring height",
+          "value_mm": 4,
+          "status": "passed",
+          "assertion_id": "measure-b8cebcad66a274d3630b8c15",
+          "from_face": "f2",
+          "to_face": "f33"
+        },
+        {
+          "check": "rim axial wall",
+          "value_mm": 1.2,
+          "status": "passed",
+          "assertion_id": "measure-77ef6d8fde6fc65281a4dc1e",
+          "from_face": "f348",
+          "to_face": "f372"
+        }
+      ],
+      "wall_validation": {
+        "nominal_offset_mm": 1.2,
+        "curved_surface_sample_count": 48,
+        "curved_surface_acceptance_bounds_mm": [
+          1.165,
+          1.235
+        ],
+        "all_band_sample_count": 144,
+        "all_band_acceptance_bounds_mm": [
+          1.165,
+          1.44
+        ],
+        "build_samples_passed": true,
+        "uniform_wall_verified": false,
+        "method": "Exact distance from sampled analytical outer-surface points to constructed inner skin, asserted during the committed build; top axial wall measured separately. Inner curved loft approximates surface-normal offset with 13 sampled sections.",
+        "limitation": "The broader range includes neighborhoods of intentionally sharp convex miters. Constant pointwise thickness at sharp corners is not claimed. Source sampling is not an exhaustive thickness analysis."
+      },
+      "visual_review": {
+        "views": [
+          "iso",
+          "front",
+          "iso_back"
+        ],
+        "finding": "Concave troughs are visibly rounded with continuous shading into their two original neighboring facets. Convex crest corners remain crisp; the independently flowing widths and original end profiles remain. Two magnet pockets and retained bottom ring are visible."
+      },
+      "export_checks": {
+        "step_sha256": "5a23944cd754cdaa89f014ce2a78a006d918296b345c4661cfc345347c87f0d5",
+        "bytes": 4247050,
+        "preview_refreshed": true,
+        "solid_count": 1,
+        "valid": true,
+        "interference_pairs": 0
+      },
+      "limits": [
+        "No physical print, heat or magnet retention test performed.",
+        "Interchangeability is checked by preserved dimensions and envelope, not a full substituted-assembly interference test.",
+        "Concave surfaces have a nominal1.2mm normal offset with bounded samples. Sharp convex miter neighborhoods remain locally thicker; no exhaustive pointwise wall certification."
+      ],
+      "width_variation_checks": {
+        "status": "passed",
+        "source_derived": {
+          "source_derived": true,
+          "method": "Original pre-blend control contour heights at360 azimuths; not remaining flat-facet widths, rounded valley depth or normal wall thickness.",
+          "mean_crest_heights_mm": [
+            12,
+            23.700000000000003,
+            39.300000000000004,
+            50.35,
+            64
+          ],
+          "peak_radii_mm": [
+            54.8,
+            54.224,
+            54.8,
+            54.416,
+            54.672
+          ],
+          "bands": [
+            {
+              "band": 1,
+              "crest_gap_range_mm": [
+                6.674,
+                15.046
+              ],
+              "preblend_broad_control_width_range_mm": [
+                4.101,
+                10.32
+              ],
+              "preblend_return_control_width_range_mm": [
+                2.522,
+                6.832
+              ]
+            },
+            {
+              "band": 2,
+              "crest_gap_range_mm": [
+                10.927,
+                21.935
+              ],
+              "preblend_broad_control_width_range_mm": [
+                8.563,
+                14.844
+              ],
+              "preblend_return_control_width_range_mm": [
+                2.133,
+                7.106
+              ]
+            },
+            {
+              "band": 3,
+              "crest_gap_range_mm": [
+                6.254,
+                15.824
+              ],
+              "preblend_broad_control_width_range_mm": [
+                4.346,
+                9.974
+              ],
+              "preblend_return_control_width_range_mm": [
+                1.897,
+                6.728
+              ]
+            },
+            {
+              "band": 4,
+              "crest_gap_range_mm": [
+                10.791,
+                18.388
+              ],
+              "preblend_broad_control_width_range_mm": [
+                6.955,
+                11.742
+              ],
+              "preblend_return_control_width_range_mm": [
+                2.4,
+                7.026
+              ]
+            }
+          ]
+        },
+        "acceptance": "Each main band has a nonzero width range around the circumference, different layer spacing and independent ridge curves; visual review confirms widening and narrowing on both sides.",
+        "contour_order_checks": {
+          "azimuth_samples": 64,
+          "minimum_crest_gap_required_mm": 4.8,
+          "minimum_sub_band_axial_width_required_mm": 1.2,
+          "passed": true
+        }
+      },
+      "crest_preservation": {
+        "sample_count": 80,
+        "maximum_accepted_surface_deviation_mm": 0.0001,
+        "status": "passed",
+        "evidence": "Five original crest curves sampled at16 azimuths against the constructed outer-skin faces in the committed cell. Original crest endpoint positions and neighboring exterior slope portions retained; no convex-edge fillet applied."
+      }
+    }
   }
 }

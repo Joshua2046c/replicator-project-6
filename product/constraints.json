@@ -9,8 +9,9 @@
     "magnets": {
       "diameter": 7,
       "thickness": 2,
-      "quantity": 8,
-      "evidence": "user dimensions"
+      "quantity": 10,
+      "evidence": "user dimensions",
+      "quantity_scope": "original assembled lantern 8 plus optional water-ripple spare shade 2"
     }
   },
   "interfaces": {
@@ -107,6 +108,137 @@
       "upper_rim_z": 108,
       "outer_shoulder_start_z": 96.2,
       "validation_note": "Nominal offset with spline approximation; measured values are recorded in validation, not a physical print tolerance."
+    },
+    "water_shade": {
+      "height": 76,
+      "max_outer_diameter": 109.6,
+      "top_opening_diameter": 82.4,
+      "bottom_opening_diameter": 69.2,
+      "normal_wall": 1.2,
+      "magnet_ring_outer_diameter": 94,
+      "magnet_ring_height": 4,
+      "magnet_radius": 39.2,
+      "magnet_angles_deg": [
+        0,
+        180
+      ],
+      "pocket_diameter": 7.2,
+      "pocket_depth": 2.15,
+      "installed_origin": [
+        0,
+        0,
+        32
+      ],
+      "display_origin": [
+        180,
+        0,
+        32
+      ],
+      "substitution_only": true,
+      "wave_style": "unequal independently flowing bands with smooth concave troughs and unchanged sharp convex ridge corners",
+      "ridge_count": 5,
+      "wave_rise": 4,
+      "secondary_rise": 1.2,
+      "wall_validation_note": "Curved inner skin follows a nominal 1.2 mm surface-normal offset. 48 concave-surface samples must lie within 1.2±0.035 mm; sharp miter corners can locally thicken and are not pointwise uniform.",
+      "nominal_span_control": 13,
+      "nominal_wave_depth": 3.2,
+      "flow_variation": 1,
+      "mean_crest_heights": [
+        12,
+        23.700000000000003,
+        39.300000000000004,
+        50.35,
+        64
+      ],
+      "peak_radii": [
+        54.8,
+        54.224,
+        54.8,
+        54.416,
+        54.672
+      ],
+      "source_derived_widths": {
+        "source_derived": true,
+        "method": "Pre-blend control contour heights at 360 azimuth samples; original control-leg width ranges, not remaining planar facets or BRep normal wall thickness.",
+        "mean_crest_heights_mm": [
+          12,
+          23.700000000000003,
+          39.300000000000004,
+          50.35,
+          64
+        ],
+        "peak_radii_mm": [
+          54.8,
+          54.224,
+          54.8,
+          54.416,
+          54.672
+        ],
+        "bands": [
+          {
+            "band": 1,
+            "crest_gap_range_mm": [
+              6.674,
+              15.046
+            ],
+            "preblend_broad_control_width_range_mm": [
+              4.101,
+              10.32
+            ],
+            "preblend_return_control_width_range_mm": [
+              2.522,
+              6.832
+            ]
+          },
+          {
+            "band": 2,
+            "crest_gap_range_mm": [
+              10.927,
+              21.935
+            ],
+            "preblend_broad_control_width_range_mm": [
+              8.563,
+              14.844
+            ],
+            "preblend_return_control_width_range_mm": [
+              2.133,
+              7.106
+            ]
+          },
+          {
+            "band": 3,
+            "crest_gap_range_mm": [
+              6.254,
+              15.824
+            ],
+            "preblend_broad_control_width_range_mm": [
+              4.346,
+              9.974
+            ],
+            "preblend_return_control_width_range_mm": [
+              1.897,
+              6.728
+            ]
+          },
+          {
+            "band": 4,
+            "crest_gap_range_mm": [
+              10.791,
+              18.388
+            ],
+            "preblend_broad_control_width_range_mm": [
+              6.955,
+              11.742
+            ],
+            "preblend_return_control_width_range_mm": [
+              2.4,
+              7.026
+            ]
+          }
+        ]
+      },
+      "valley_blend_fraction": 0.65,
+      "concave_transition": "Quadratic tangent blend over 65% of each adjoining crest-to-valley control leg; 35% next to each convex crest retains its original outer slope."
     }
   },
   "defaults": {

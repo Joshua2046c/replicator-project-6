@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "units": "mm",
+  "coordinateFrame": "makit-world-z-up",
+  "targets": [
+    {
+      "id": "water_shade",
+      "label": "water_shade",
+      "cells": [
+        {
+          "id": "water_shade",
+          "target": "water_shade",
+          "order": 0,
+          "path": "design/water_shade/source/parts/water_shade/000-water_shade.py",
+          "sha256": "783993a6f38ab551b153c7cba74c952605078cd2fbee9b6975c511cb243d3f23"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "water_shade",
+      "target": "water_shade",
+      "label": "自然流动海浪灯罩",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "97d9775173e2e32a710d1203b6f1a282d26afbbd5798205f31834cca79f8891e",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    }
+  ],
+  "assets": [],
+  "fits": [],
+  "updatedAt": "2026-10-28T01:20:40.269Z",
+  "parameters": {
+    "water_shade": {
+      "water_shade_height": 76,
+      "water_shade_maximum_diameter": 109.6,
+      "water_shade_wall": 1.2,
+      "water_shade_top_opening": 82.4,
+      "water_shade_top_outer": 87.2,
+      "water_shade_bottom_opening": 69.2,
+      "water_shade_ring_outer": 94,
+      "water_shade_ring_height": 4,
+      "water_shade_magnet_diameter": 7.2,
+      "water_shade_magnet_depth": 2.15,
+      "water_shade_magnet_radius": 39.2,
+      "water_shade_ripple_pitch": 13,
+      "water_shade_wave_depth": 3.2,
+      "water_shade_ridge_count": 5,
+      "water_shade_broad_face_fraction": 0.72,
+      "water_shade_wave_rise": 4,
+      "water_shade_secondary_rise": 1.2,
+      "water_shade_flow_variation": 1,
+      "water_shade_valley_blend": 0.65
+    }
+  }
+}

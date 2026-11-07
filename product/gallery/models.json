@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "models": [
+    {
+      "file": "models/lantern.glb",
+      "design": "lantern"
+    }
+  ]
+}

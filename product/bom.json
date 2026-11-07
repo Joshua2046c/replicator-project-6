@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "bom_ready": true,
-  "requirements_digest": "78d29bb588cf87f3f52f91a2a3946d87cc356ec17a2a3e2d817e795e6c616d3d",
+  "requirements_digest": "0c1da7ebc232a345c731392bc67c4e886b5352d5d79903f62ad28b8aac27a810",
   "items": [
     {
       "id": "handle",
@@ -86,10 +86,11 @@
       "id": "magnet_7x2",
       "role": "magnetic_fastener",
       "name": "轴向充磁圆片磁铁 Ø7×2 mm",
-      "quantity": 8,
+      "quantity": 10,
       "source": "user_dimensions",
       "procurement_status": "external_procurement_required",
-      "required_user_evidence": []
+      "required_user_evidence": [],
+      "selection_reason": "原整灯8枚，额外水波纹替换灯罩2枚；两种灯罩择一装配"
     },
     {
       "id": "light_60x8",
@@ -108,6 +109,102 @@
       "source": "default",
       "procurement_status": "external_procurement_required",
       "required_user_evidence": []
+    },
+    {
+      "id": "water_shade",
+      "role": "printed_part",
+      "name": "自然流动海浪纹替换灯罩，凹谷弧面及锐棱，约1.2mm，半透明PETG",
+      "quantity": 1,
+      "source": "default",
+      "selection_reason": "内凹波谷改为连续弧面，两侧相切；保留凸起锐棱及其邻近原斜面、不等宽流动波带、两处磁吸及开口接口",
+      "wall_specification": {
+        "nominal_normal_mm": 1.2,
+        "magnet_ring_height_mm": 4
+      },
+      "assembly_interface": {
+        "top_opening_mm": 82.4,
+        "bottom_opening_mm": 69.2,
+        "magnet_pocket_diameter_mm": 7.2,
+        "magnet_pocket_depth_mm": 2.15,
+        "magnet_radius_mm": 39.2,
+        "magnet_angles_deg": [
+          0,
+          180
+        ]
+      },
+      "surface_specification": {
+        "ridge_count": 5,
+        "nominal_depth_mm": 3.2,
+        "constant_pitch": false,
+        "constant_band_width": false,
+        "independent_ridge_curves": true,
+        "source_derived_band_width_ranges_mm": [
+          {
+            "band": 1,
+            "crest_gap_range_mm": [
+              6.674,
+              15.046
+            ],
+            "preblend_broad_control_width_range_mm": [
+              4.101,
+              10.32
+            ],
+            "preblend_return_control_width_range_mm": [
+              2.522,
+              6.832
+            ]
+          },
+          {
+            "band": 2,
+            "crest_gap_range_mm": [
+              10.927,
+              21.935
+            ],
+            "preblend_broad_control_width_range_mm": [
+              8.563,
+              14.844
+            ],
+            "preblend_return_control_width_range_mm": [
+              2.133,
+              7.106
+            ]
+          },
+          {
+            "band": 3,
+            "crest_gap_range_mm": [
+              6.254,
+              15.824
+            ],
+            "preblend_broad_control_width_range_mm": [
+              4.346,
+              9.974
+            ],
+            "preblend_return_control_width_range_mm": [
+              1.897,
+              6.728
+            ]
+          },
+          {
+            "band": 4,
+            "crest_gap_range_mm": [
+              10.791,
+              18.388
+            ],
+            "preblend_broad_control_width_range_mm": [
+              6.955,
+              11.742
+            ],
+            "preblend_return_control_width_range_mm": [
+              2.4,
+              7.026
+            ]
+          }
+        ],
+        "concave_transition": "tangent quadratic curved surface",
+        "convex_ridges": "original sharp ridge positions and neighboring crest facets retained",
+        "valley_blend_fraction": 0.65,
+        "width_range_basis": "Pre-blend control polygon axial widths, not remaining planar facet widths or wall thickness."
+      }
     }
   ],
   "unresolved_items": [],

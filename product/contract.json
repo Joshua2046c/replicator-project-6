@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "printable_part",
-  "summary": "四个功能部件的中式磁吸提灯；提手分为顶梁、左竖杆、右竖杆，连同底座、内胆、灯罩共六个打印实体。",
+  "summary": "四个功能部件的中式磁吸提灯；提手分为顶梁、左竖杆、右竖杆，连同底座、内胆、灯罩共六个打印实体。 另附独立水波纹替换灯罩，在原提灯旁展示。",
   "required_interfaces": [
     {
       "id": "light_fit",
@@ -57,6 +57,20 @@
       "id": "shade_inner_waves",
       "kind": "internal_fit",
       "description": "整圈标注区域内外波纹对应，按法线保持约1.2mm等厚；保留未标注磁铁安装环及孔位",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "water_shade_compatibility",
+      "kind": "mechanical_mating",
+      "description": "独立替换灯罩沿用高76mm、顶孔82.4mm、底孔69.2mm、两处0/180°半径39.2mm磁铁孔Ø7.2×2.15mm；原提灯不替换，薄壁约1.2mm",
+      "source": "existing_workspace",
+      "required": true
+    },
+    {
+      "id": "water_ripple_surface",
+      "kind": "internal_fit",
+      "description": "参照图片，海浪层宽窄不等；同一波带沿圆周逐渐变宽、收窄，每道棱线独立弯曲起伏并自然靠拢、展开；保留立体峰谷和清晰棱线，内壁随形；标注内凹谷部采用与两侧斜面相切的弧面，凸起棱脊的折角及靠近凸棱的原斜面不变",
       "source": "user_requested",
       "required": true
     }
@@ -133,6 +147,30 @@
       "source": "user_requested",
       "description": "绿色标注包括上肩及纵向波纹，整圈从顶到底按最薄处统一壁厚；替代较早保留厚肩的要求",
       "path": "product/references/uploads/20261016T045841396Z-1-mark-1.png"
+    },
+    {
+      "id": "water_ripple_reference",
+      "source": "user_requested",
+      "description": "宽幅、错落起伏的水波纹参考；不照搬金属壶盖和细微锤纹",
+      "path": "product/references/uploads/20261016T065243883Z-1-image.png"
+    },
+    {
+      "id": "water_ripple_ridges_reference",
+      "source": "user_requested",
+      "description": "参考立体海浪折面：棱线清晰；各层宽窄不同且沿周向变化，相邻曲线流动汇聚和展开",
+      "path": "product/references/uploads/20261016T074840005Z-1-image.png"
+    },
+    {
+      "id": "water_concave_upper_reference",
+      "source": "user_requested",
+      "description": "内凹过渡改弧面，凸起折角保持；用户涂色标注",
+      "path": "product/references/uploads/20261016T082929695Z-1-mark-1.png"
+    },
+    {
+      "id": "water_concave_lower_reference",
+      "source": "user_requested",
+      "description": "内凹过渡改弧面，凸起折角保持；用户涂色标注",
+      "path": "product/references/uploads/20261016T082929695Z-2-mark-2.png"
     }
   ],
   "assembly_story": {
@@ -178,6 +216,26 @@
           "beam_joint_reference",
           "shade_wall_reference",
           "shade_uniform_wall_reference"
+        ]
+      },
+      {
+        "role": "water_ripple_shade",
+        "design_id": "water_shade",
+        "description": "Standalone interchangeable water-ripple lampshade displayed beside original lantern",
+        "delivery_target": "printable_part",
+        "required_formats": [
+          "step"
+        ],
+        "interface_ids": [
+          "water_shade_compatibility",
+          "water_ripple_surface"
+        ],
+        "reference_ids": [
+          "water_ripple_reference",
+          "shade_uniform_wall_reference",
+          "water_ripple_ridges_reference",
+          "water_concave_upper_reference",
+          "water_concave_lower_reference"
         ]
       }
     ]

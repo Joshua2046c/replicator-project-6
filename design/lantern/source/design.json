@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "units": "mm",
-  "coordinateFrame": "replicator-world-z-up",
+  "coordinateFrame": "makit-world-z-up",
   "targets": [
     {
       "id": "base",
@@ -67,39 +67,12 @@
       "label": "浅托盘底座",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "5269990fb65970016940ec8b0116d2fbc9a50372d8923da9baf443d3e33cc7d5",
+      "shapeHash": "006b008f1b8d638e0d5a80a029cae5041ec0a20520e3166ccc90fdf9572e2224",
       "transform": {
         "positionMm": [
           0,
           0,
           0
-        ],
-        "rotationDeg": [
-          0,
-          0,
-          0
-        ],
-        "rotationOrder": "XYZ",
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "datums": []
-    },
-    {
-      "id": "handle",
-      "target": "handle",
-      "label": "翘头顶梁",
-      "material": "petg",
-      "kind": "generated",
-      "shapeHash": "4572a177b69d859e8b538602a525d29397c1bb76e72e9c07d64f43607466e3e7",
-      "transform": {
-        "positionMm": [
-          0,
-          0,
-          12
         ],
         "rotationDeg": [
           0,
@@ -121,7 +94,7 @@
       "label": "左竖杆",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "217de6cc7544f1f8cbfb7423bebba82273fcd55019a11ee36d9b1473c9a21015",
+      "shapeHash": "67308c34f7c4b7c13c7f16a04e461f9075d42787b5834ff409ccd17e9fc8a7f5",
       "transform": {
         "positionMm": [
           0,
@@ -148,7 +121,34 @@
       "label": "右竖杆",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "a83001b1b6b2f0706217926fcc89e037a135528aa8a0907da57b8727109e4e25",
+      "shapeHash": "6b5a64f4d80f6fd2826a6d6fb480deb9bde5529631bc7d5625b1baa44170dbd7",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          12
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "handle",
+      "target": "handle",
+      "label": "翘头顶梁",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "951f4bbed74a690445ba6411e6528efa83e659ad895ec24eb0ffebb8c1c43b28",
       "transform": {
         "positionMm": [
           0,
@@ -175,7 +175,7 @@
       "label": "直筒镂空内胆",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "63447e79dab7268d902cd910031c857cb2252a053b2723cb1a7b90333b6e1f9a",
+      "shapeHash": "bb963f755f1426356df017d510f1b7b81dbc5025cb43b96eb5b07e178f703af6",
       "transform": {
         "positionMm": [
           0,
@@ -202,7 +202,7 @@
       "label": "等厚波纹灯罩",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "55fd0e7d1f901a279d1a03497407c5f4c6645160fd644ea7f8930cce34501d93",
+      "shapeHash": "877e8fef6055b586875db268d9da6ee9502c48557fa8f2ac031dbf3a120f0e36",
       "transform": {
         "positionMm": [
           0,
@@ -226,7 +226,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-10-16T05:39:52.186Z",
+  "updatedAt": "2026-10-28T01:21:49.217Z",
   "parameters": {
     "base": {
       "base_diameter": 114,
